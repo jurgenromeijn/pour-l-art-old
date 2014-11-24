@@ -41,7 +41,7 @@ gulp.task('deploy-assets', function() {
 		.pipe(gulp.dest('build/js'));
 });
 
-gulp.task('vendor', ['vendor-bootstrap', 'vendor-jquery');
+gulp.task('vendor', ['vendor-bootstrap', 'vendor-jquery']);
 
 gulp.task('vendor-bootstrap', function() {
 	gulp.src('vendor/bootstrap-sass-3.3.1/assets/fonts/**')

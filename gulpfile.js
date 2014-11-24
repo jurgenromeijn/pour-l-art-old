@@ -1,9 +1,13 @@
-var gulp = require('gulp'),
-	sass = require('gulp-ruby-sass'),
-	minifyCss = require('gulp-minify-css'),
-	autoprefixer = require('gulp-autoprefixer');
+var gulp         = require('gulp'),
+	sass         = require('gulp-ruby-sass'),
+	minifyCss    = require('gulp-minify-css'),
+	autoprefixer = require('gulp-autoprefixer'),
+	watch        = require('gulp-watch');
 
-gulp.task('default', ['build-dev'], function() {
+gulp.task('default', ['build-dev', 'watch']);
+
+gulp.task('watch', function() {
+	gulp.watch('src/**', ['build-dev']);
 });
 
 gulp.task('build', ['vendor', 'deploy-html', 'deploy-assets'], function() {

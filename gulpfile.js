@@ -41,7 +41,7 @@ gulp.task('deploy-assets', function() {
 		.pipe(gulp.dest('build/js'));
 });
 
-gulp.task('vendor', ['vendor-bootstrap']);
+gulp.task('vendor', ['vendor-bootstrap', 'vendor-jquery');
 
 gulp.task('vendor-bootstrap', function() {
 	gulp.src('vendor/bootstrap-sass-3.3.1/assets/fonts/**')
@@ -51,5 +51,10 @@ gulp.task('vendor-bootstrap', function() {
 		.pipe(gulp.dest('build/webroot/images'));
 
 	gulp.src('vendor/bootstrap-sass-3.3.1/assets/javascripts/**')
+		.pipe(gulp.dest('build/webroot/js'));
+});
+
+gulp.task('vendor-jquery', function() {
+	gulp.src('vendor/jquery-2.1.1/assets/js/**')
 		.pipe(gulp.dest('build/webroot/js'));
 });

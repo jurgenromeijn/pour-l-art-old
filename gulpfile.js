@@ -12,6 +12,9 @@ gulp.task('build-dev', function() {
 		.pipe(autoprefixer())
 		.pipe(minifyCss())
 		.pipe(gulp.dest('build/webroot/assets/css'));
+
+	gulp.src('src/app/html/*.html')
+		.pipe(gulp.dest('build/webroot'));
 });
 
 gulp.task('build-dev', ['vendor'], function() {
@@ -19,6 +22,9 @@ gulp.task('build-dev', ['vendor'], function() {
 		.pipe(sass())
 		.pipe(autoprefixer())
 		.pipe(gulp.dest('build/webroot/assets/css'));
+
+	gulp.src('src/app/html/*.html')
+		.pipe(gulp.dest('build/webroot'));
 });
 
 gulp.task('vendor', ['vendor-bootstrap']);

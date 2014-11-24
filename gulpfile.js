@@ -9,3 +9,4 @@ gulp.task('default', function() {
 		.pipe(autoprefixer())
 		.pipe(minifyCss())
 		.pipe(gulp.dest('build/webroot/css/styles.css'));
+});

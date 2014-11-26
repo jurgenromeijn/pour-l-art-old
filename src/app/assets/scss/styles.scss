@@ -1,1 +1,11 @@
-@import "../../../../vendor/bootstrap-sass-3.3.1/assets/stylesheets/_bootstrap.scss";
+// Config
+@import "_variables.scss";
+@import "_fonts.scss";
+
+//Vendor
+@import "_bootstrap.scss";
+
+//Sectios
+@import "sections/_navbar.scss";
+
+//Pages

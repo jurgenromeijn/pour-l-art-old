@@ -1,5 +1,6 @@
-.navbar-brand {
+.navbar-default .navbar-brand {
 	font-family: $headings-font-family;
 	font-size: $font-size-large * 2;
 	line-height: $line-height-computed * 1.5;
+	color: $brand-primary;
 }

@@ -27,8 +27,8 @@ gulp.task('build-dev', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], func
 });
 
 gulp.task('clean', function () {  
-	gulp.src('build', {read: false})
-		.pipe(clean());
+	// gulp.src('build', {read: false})
+	//  	.pipe(clean());
 });
 
 gulp.task('deploy-html', function() {
@@ -38,13 +38,13 @@ gulp.task('deploy-html', function() {
 
 gulp.task('deploy-assets', function() {
 	gulp.src('src/app/assets/images/**')
-		.pipe(gulp.dest('build/images'));
+		.pipe(gulp.dest('build/webroot/images'));
 
 	gulp.src('src/app/assets/fonts/**')
-		.pipe(gulp.dest('build/fonts'));
+		.pipe(gulp.dest('build/webroot/fonts'));
 
 	gulp.src('src/app/assets/js/**')
-		.pipe(gulp.dest('build/js'));
+		.pipe(gulp.dest('build/webroot/js'));
 });
 
 gulp.task('vendor', ['vendor-bootstrap', 'vendor-jquery']);

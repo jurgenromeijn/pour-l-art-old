@@ -2,7 +2,8 @@ var gulp         = require('gulp'),
 	sass         = require('gulp-ruby-sass'),
 	minifyCss    = require('gulp-minify-css'),
 	autoprefixer = require('gulp-autoprefixer'),
-	watch        = require('gulp-watch');
+	watch        = require('gulp-watch'),
+	clean        = require('gulp-clean');
 
 gulp.task('default', ['build-dev', 'watch']);
 
@@ -10,7 +11,7 @@ gulp.task('watch', function() {
 	gulp.watch('src/**', ['build-dev']);
 });
 
-gulp.task('build', ['vendor', 'deploy-html', 'deploy-assets'], function() {
+gulp.task('build', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function() {
 	gulp.src('src/app/assets/scss/styles.scss')
 		.pipe(sass())
 		.pipe(autoprefixer())
@@ -18,11 +19,16 @@ gulp.task('build', ['vendor', 'deploy-html', 'deploy-assets'], function() {
 		.pipe(gulp.dest('build/webroot/css'));
 });
 
-gulp.task('build-dev', ['vendor', 'deploy-html', 'deploy-assets'], function() {
+gulp.task('build-dev', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function() {
 	gulp.src('src/app/assets/scss/styles.scss')
 		.pipe(sass())
 		.pipe(autoprefixer())
 		.pipe(gulp.dest('build/webroot/css'));
+});
+
+gulp.task('clean', function () {  
+	gulp.src('build', {read: false})
+		.pipe(clean());
 });
 
 gulp.task('deploy-html', function() {

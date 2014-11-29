@@ -50,6 +50,7 @@ gulp.task('deploy-assets', function() {
 gulp.task('vendor', ['vendor-bootstrap', 'vendor-jquery']);
 
 gulp.task('vendor-bootstrap', function() {
+	// Bootstrap
 	gulp.src('vendor/bootstrap-sass-3.3.1/assets/fonts/**')
 		.pipe(gulp.dest('build/webroot/fonts'));
 
@@ -58,6 +59,10 @@ gulp.task('vendor-bootstrap', function() {
 
 	gulp.src('vendor/bootstrap-sass-3.3.1/assets/javascripts/**')
 		.pipe(gulp.dest('build/webroot/js'));
+
+	// Font awesome
+	gulp.src('vendor/font-awesome-4.2.0/fonts/**')
+		.pipe(gulp.dest('build/webroot/fonts'));
 });
 
 gulp.task('vendor-jquery', function() {

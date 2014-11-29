@@ -4,10 +4,12 @@
 
 //Vendor
 @import "_bootstrap.scss";
+@import "../../../../vendor/font-awesome-4.2.0/scss/font-awesome.scss";
 
 //Sectios
 @import "partials/_navbars.scss";
 @import "partials/_heroes.scss";
-@import "partials/_content.scss";
+@import "partials/_articles.scss";
 @import "partials/_sections.scss";
+
 //Pages

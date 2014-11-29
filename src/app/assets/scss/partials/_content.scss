@@ -1,0 +1,16 @@
+.content {
+	
+}
+
+.content_block {
+	padding: 100px 0;
+}
+
+.content_block_header {
+
+}
+
+.content_block-alternative {
+	@extend .content_block;
+	background: $gray-lighter;
+}

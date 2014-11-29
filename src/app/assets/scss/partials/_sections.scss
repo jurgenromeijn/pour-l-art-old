@@ -1,0 +1,16 @@
+.content {
+	
+}
+
+.section {
+	padding: 100px 0;
+}
+
+.section_header {
+	text-align: center;
+}
+
+.section-alternative {
+	@extend .section;
+	background: $gray-lighter;
+}

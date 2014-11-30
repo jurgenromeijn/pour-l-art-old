@@ -6,12 +6,17 @@
 	padding: 100px 0;
 }
 
-.section_header {
-	margin-bottom: 50px;
-	text-align: center;
-}
-
 .section-alternative {
 	@extend .section;
 	background: $gray-lighter;
+}
+
+.section_header {
+	text-align: center;
+}
+
+.section_tagline {
+	color: $gray-light;
+	font-size: $font-size-large;
+	font-weight: lighter;
 }

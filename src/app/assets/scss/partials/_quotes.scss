@@ -1,6 +1,10 @@
 .quote {
 	border-left: none;
 	text-align: right;
+
+	@media (max-width: $grid-float-breakpoint) {
+		text-align: center;
+	}
 }
 
 .quote_content {

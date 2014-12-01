@@ -3,3 +3,60 @@
 	background: $gray-darker;
 	color: #ffffff;
 }
+
+.footer_copyright {
+	margin: ($font-size-large / 2) 0;
+}
+
+.footer_brand {
+	font-family: $headings-font-family;
+	font-size: $font-size-large;
+	line-height: 0.8;
+}
+
+.footer_social {
+	list-style: none;
+	margin-bottom: 0;
+
+	li {
+		list-style: none;
+		display: inline-block;
+		margin: 0 5px;
+	}
+}
+
+.footer_social-icon {
+	background: #ffffff;
+	border-radius: $font-size-large;
+	color: $gray-darker;
+	display: inline-block;
+	font-size: $font-size-large;
+	height: $font-size-large * 2;
+	line-height: $font-size-large * 2;
+	width: $font-size-large * 2;
+	text-align: center;
+}
+
+.footer_social-icon:hover {
+	color: #ffffff;
+
+	&.fa-facebook {
+		background: #3b5998;
+	}
+
+	&.fa-twitter {
+		background: #4099ff;
+	}
+
+	&.fa-pinterest {
+		background: #c92228;
+	}
+
+	&.fa-instagram { 
+		background: #428bca;
+	}
+}
+
+.footer_links {
+	margin: ($font-size-large / 2) 0;
+}

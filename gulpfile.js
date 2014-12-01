@@ -3,7 +3,8 @@ var gulp         = require('gulp'),
 	minifyCss    = require('gulp-minify-css'),
 	autoprefixer = require('gulp-autoprefixer'),
 	watch        = require('gulp-watch'),
-	clean        = require('gulp-clean');
+	clean        = require('gulp-clean'),
+	favicons     = require('favicons');
 
 gulp.task('default', ['build-dev', 'watch']);
 
@@ -11,7 +12,7 @@ gulp.task('watch', function() {
 	gulp.watch('src/**', ['build-dev']);
 });
 
-gulp.task('build', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function() {
+gulp.task('build', ['clean', 'vendor', 'deploy-html', 'create-favicon', 'deploy-assets'], function() {
 	gulp.src('src/app/assets/scss/styles.scss')
 		.pipe(sass())
 		.pipe(autoprefixer())
@@ -19,7 +20,7 @@ gulp.task('build', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function
 		.pipe(gulp.dest('build/webroot/css'));
 });
 
-gulp.task('build-dev', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function() {
+gulp.task('build-dev', ['clean', 'vendor', 'deploy-html', 'create-favicon', 'deploy-assets'], function() {
 	gulp.src('src/app/assets/scss/styles.scss')
 		.pipe(sass())
 		.pipe(autoprefixer())
@@ -29,6 +30,31 @@ gulp.task('build-dev', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], func
 gulp.task('clean', function () {  
 	// gulp.src('build', {read: false})
 	//  	.pipe(clean());
+});
+
+gulp.task('create-favicon', function() {
+	/*favicons({
+	    // I/O
+	    source: 'src/app/assets/images/favicon.png',
+	    dest: 'build/webroot',
+
+	    // Icon Types
+	    android: true,
+	    apple: true,
+	    coast: true,
+	    favicons: true,
+	    firefox: true,
+	    windows: true,
+
+	    // Miscellaneous
+	    html: null,
+	    background: '#1d1d1d',
+	    tileBlackWhite: true,
+	    manifest: null,
+	    trueColor: false,
+	    logging: false,
+	    callback: null
+	});*/
 });
 
 gulp.task('deploy-html', function() {

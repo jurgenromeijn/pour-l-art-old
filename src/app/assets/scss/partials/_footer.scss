@@ -5,7 +5,7 @@
 }
 
 .footer_copyright {
-	margin: ($font-size-large / 2) 0;
+	margin: ((40 - $font-size-large) / 2) 0;
 }
 
 .footer_brand {
@@ -27,36 +27,38 @@
 
 .footer_social-icon {
 	background: #ffffff;
-	border-radius: $font-size-large;
+	border-radius: 20px;
 	color: $gray-darker;
 	display: inline-block;
-	font-size: $font-size-large;
-	height: $font-size-large * 2;
-	line-height: $font-size-large * 2;
-	width: $font-size-large * 2;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	width: 40px;
 	text-align: center;
 }
 
 .footer_social-icon:hover {
-	color: #ffffff;
-
 	&.fa-facebook {
+		color: #ffffff;
 		background: #3b5998;
 	}
 
 	&.fa-twitter {
+		color: #ffffff;
 		background: #4099ff;
 	}
 
 	&.fa-pinterest {
+		color: #ffffff;
 		background: #c92228;
 	}
 
 	&.fa-instagram { 
+		color: #ffffff;
 		background: #428bca;
 	}
 }
 
 .footer_links {
-	margin: ($font-size-large / 2) 0;
+	margin: ((40 - $font-size-large) / 2) 0;
 }

@@ -1,8 +1,37 @@
 .hero {
 	background-color: $gray-darker;
+	position: relative;
 }
 
 .hero-image {
 	width: 100%;
 	opacity: 0.5;
+}
+
+.hero_caption {
+	position: absolute;
+	top: 30%;
+	right: 0;
+	left: 0;
+	text-align: center;
+}
+
+.hero_title {
+	color: #ffffff;
+}
+
+.hero_button {
+	display: inline-block;;
+	background: $brand-primary;
+	color: #ffffff;
+	font-size: $font-size-large;
+	font-weight: lighter;
+	margin-top: 30px;
+	padding: 15px 45px;
+}
+
+.hero_button:hover {
+	background: #ffffff;
+	color: $brand-primary;
+	text-decoration: none !important;
 }

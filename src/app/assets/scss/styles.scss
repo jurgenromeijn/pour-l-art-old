@@ -6,7 +6,8 @@
 @import "_bootstrap.scss";
 @import "../../../../vendor/font-awesome-4.2.0/scss/font-awesome.scss";
 
-//Sectios
+//Sections
+@import "partials/_grid.scss";
 @import "partials/_navbars.scss";
 @import "partials/_heroes.scss";
 @import "partials/_articles.scss";

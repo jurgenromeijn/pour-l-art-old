@@ -1,0 +1,46 @@
+.quote {
+	border-left: none;
+	text-align: right;
+
+	@media (max-width: $grid-float-breakpoint) {
+		text-align: center;
+	}
+}
+
+.quote_content {
+	@extend h1;
+	color: #000000;
+}
+
+.quote_content:before {
+	content: "“";
+	color: $brand-primary;
+}
+
+.quote_content:after {
+	content: "”";
+	color: $brand-primary;
+}
+
+.quote_author {
+	font-weight: lighter;
+	font-style: normal;
+}
+
+.quote_author:before {
+	color: $brand-primary;
+	content: "-";
+	font-size: $font-size-h1;
+	font-family: $headings-font-family;
+	line-height: 0.25;
+	margin-right: 10px;
+	position: relative;
+	top: $font-size-base; 
+}
+
+.quote_image {
+	width: 100%;
+	max-width: 300px;
+	border: 5px solid #ffffff;
+	border-radius: 500px;
+}

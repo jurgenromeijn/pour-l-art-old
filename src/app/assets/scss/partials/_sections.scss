@@ -1,0 +1,22 @@
+.content {
+	
+}
+
+.section {
+	padding: 100px 0;
+}
+
+.section-alternative {
+	@extend .section;
+	background: $gray-lighter;
+}
+
+.section_header {
+	text-align: center;
+}
+
+.section_tagline {
+	color: $gray-light;
+	font-size: $font-size-large;
+	font-weight: lighter;
+}

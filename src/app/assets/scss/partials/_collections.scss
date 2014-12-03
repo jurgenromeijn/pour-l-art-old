@@ -1,0 +1,40 @@
+.collection {
+	list-style: none;
+	margin-top: 20px;
+}
+
+.collection-item {
+	background: $gray-lighter;
+	margin-top: 30px;
+}
+
+.collection-item a {
+	color: #000000;
+	text-decoration: none !important;
+}
+
+.collection-item_image {
+	width: 100%;
+}
+
+.collection-item_caption {
+	text-align: center;
+	padding: 15px;
+	position: relative;
+}
+
+.collection-item_artist {
+	margin: 0 !important;
+}
+
+.collection-item_name {
+	margin: 0 !important;
+}
+
+.collection-item_price {
+	color: #ffffff;
+	height: 20px;
+	right: 10px;
+	top: -30px;
+	position: absolute;
+}

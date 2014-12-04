@@ -33,7 +33,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('create-favicon', function() {
-	/*favicons({
+	 favicons({
 	    // I/O
 	    source: 'src/app/assets/images/favicon.png',
 	    dest: 'build/webroot',
@@ -48,13 +48,13 @@ gulp.task('create-favicon', function() {
 
 	    // Miscellaneous
 	    html: null,
-	    background: '#1d1d1d',
+	    background: 'none',
 	    tileBlackWhite: true,
 	    manifest: null,
 	    trueColor: false,
 	    logging: false,
 	    callback: null
-	});*/
+	});
 });
 
 gulp.task('deploy-html', function() {

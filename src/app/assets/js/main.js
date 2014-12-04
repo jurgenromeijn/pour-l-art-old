@@ -42,3 +42,11 @@ var cbpAnimatedHeader = (function() {
 	init();
 
 })();
+
+var scrollLink = (function() {
+	$('a.link-scroll').click(function(e) {
+		var target = $(this).attr('href');
+		e.preventDefault();
+		$("html, body").animate({ scrollTop: $(target).offset().top }, 1000);
+	});
+})();

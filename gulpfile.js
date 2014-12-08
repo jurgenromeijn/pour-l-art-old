@@ -6,7 +6,7 @@ var gulp         = require('gulp'),
 
 var path = {
 	src : {
-		assets: 'src/app/assets',
+		assets: 'src/app/assets/**',
 		fonts: 'src/app/assets/fonts/**',
 		images: 'src/app/assets/images/**',
 		html: 'src/app/html/**/*.html',
@@ -16,6 +16,7 @@ var path = {
 		webroot: 'src/app/assets/webroot/**',
 	},
 	vendor : {
+		all: 'vendor/**',
 		bootstrap: {
 			fonts: 'vendor/bootstrap-sass-3.3.1/assets/fonts/**',
 			images: 'vendor/bootstrap-sass-3.3.1/assets/images/**',
@@ -44,10 +45,19 @@ var path = {
 gulp.task('default', ['build-dev', 'watch']);
 
 gulp.task('watch', function() {
-	gulp.watch('src/**', ['build-dev']);
+	gulp.watch([path.src.assets, '!' + path.src.scss], ['deploy-assets']);
+	gulp.watch(path.src.scss, ['deploy-css-dev']);
+	gulp.watch(path.src.html, ['deploy-html']);
+	gulp.watch(path.vendor.all, ['deploy-assets']);
 });
 
-gulp.task('build', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function() {
+gulp.task('build', ['clean', 'deploy-vendor', 'deploy-css', 'deploy-html', 'deploy-assets'], function() {
+});
+
+gulp.task('build-dev', ['clean', 'deploy-vendor', 'deploy-css-dev', 'deploy-html', 'deploy-assets'], function() {
+});
+
+gulp.task('deploy-css', function() {
 	gulp.src(path.src.scss_main)
 		.pipe(sass())
 		.pipe(autoprefixer())
@@ -55,7 +65,7 @@ gulp.task('build', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function
 		.pipe(gulp.dest(path.build.css));
 });
 
-gulp.task('build-dev', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function() {
+gulp.task('deploy-css-dev', function() {
 	gulp.src(path.src.scss_main)
 		.pipe(sass())
 		.pipe(autoprefixer())
@@ -86,9 +96,9 @@ gulp.task('deploy-assets', function() {
 		.pipe(gulp.dest(path.build.webroot));
 });
 
-gulp.task('vendor', ['vendor-bootstrap', 'vendor-fontawesome', 'vendor-jquery']);
+gulp.task('deploy-vendor', ['deploy-vendor-bootstrap', 'deploy-vendor-fontawesome', 'deploy-vendor-jquery']);
 
-gulp.task('vendor-bootstrap', function() {
+gulp.task('deploy-vendor-bootstrap', function() {
 	// Bootstrap
 	gulp.src(path.vendor.bootstrap.fonts)
 		.pipe(gulp.dest(path.build.fonts));
@@ -100,13 +110,13 @@ gulp.task('vendor-bootstrap', function() {
 		.pipe(gulp.dest(path.build.js));
 });
 
-gulp.task('vendor-fontawesome', function() {
+gulp.task('deploy-vendor-fontawesome', function() {
 	gulp.src(path.vendor.fontawesome.fonts)
 		.pipe(gulp.dest(path.build.fonts));
 });
 
 
-gulp.task('vendor-jquery', function() {
+gulp.task('deploy-vendor-jquery', function() {
 	gulp.src(path.vendor.jquery.js)
 		.pipe(gulp.dest(path.build.js));
 });

@@ -2,7 +2,8 @@ var gulp         = require('gulp'),
 	sass         = require('gulp-ruby-sass'),
 	minifyCss    = require('gulp-minify-css'),
 	autoprefixer = require('gulp-autoprefixer'),
-	watch        = require('gulp-watch');
+	watch        = require('gulp-watch'),
+	merge        = require('merge-stream');
 
 var path = {
 	src : {
@@ -58,7 +59,7 @@ gulp.task('build-dev', ['clean', 'deploy-vendor', 'deploy-css-dev', 'deploy-html
 });
 
 gulp.task('deploy-css', function() {
-	gulp.src(path.src.scss_main)
+	return gulp.src(path.src.scss_main)
 		.pipe(sass())
 		.pipe(autoprefixer())
 		.pipe(minifyCss())
@@ -66,7 +67,7 @@ gulp.task('deploy-css', function() {
 });
 
 gulp.task('deploy-css-dev', function() {
-	gulp.src(path.src.scss_main)
+	return gulp.src(path.src.scss_main)
 		.pipe(sass())
 		.pipe(autoprefixer())
 		.pipe(gulp.dest(path.build.css));
@@ -78,45 +79,48 @@ gulp.task('clean', function () {
 });
 
 gulp.task('deploy-html', function() {
-	gulp.src(path.src.html)
+	return gulp.src(path.src.html)
 		.pipe(gulp.dest(path.build.webroot));
 });
 
 gulp.task('deploy-assets', function() {
-	gulp.src(path.src.images)
-		.pipe(gulp.dest(path.build.images));
+	return merge(
+		gulp.src(path.src.images)
+			.pipe(gulp.dest(path.build.images)),
 
-	gulp.src(path.src.fonts)
-		.pipe(gulp.dest(path.build.fonts));
+		gulp.src(path.src.fonts)
+			.pipe(gulp.dest(path.build.fonts)),
 
-	gulp.src(path.src.js)
-		.pipe(gulp.dest(path.build.js));
+		gulp.src(path.src.js)
+			.pipe(gulp.dest(path.build.js)),
 
-	gulp.src(path.src.webroot)
-		.pipe(gulp.dest(path.build.webroot));
+		gulp.src(path.src.webroot)
+			.pipe(gulp.dest(path.build.webroot))
+	);
 });
 
 gulp.task('deploy-vendor', ['deploy-vendor-bootstrap', 'deploy-vendor-fontawesome', 'deploy-vendor-jquery']);
 
 gulp.task('deploy-vendor-bootstrap', function() {
-	// Bootstrap
-	gulp.src(path.vendor.bootstrap.fonts)
-		.pipe(gulp.dest(path.build.fonts));
+	return merge(
+		gulp.src(path.vendor.bootstrap.fonts)
+			.pipe(gulp.dest(path.build.fonts)),
 
-	gulp.src(path.vendor.bootstrap.images)
-		.pipe(gulp.dest(path.build.images));
+		gulp.src(path.vendor.bootstrap.images)
+			.pipe(gulp.dest(path.build.images)),
 
-	gulp.src(path.vendor.bootstrap.js)
-		.pipe(gulp.dest(path.build.js));
+		gulp.src(path.vendor.bootstrap.js)
+			.pipe(gulp.dest(path.build.js))
+	);
 });
 
 gulp.task('deploy-vendor-fontawesome', function() {
-	gulp.src(path.vendor.fontawesome.fonts)
+	return gulp.src(path.vendor.fontawesome.fonts)
 		.pipe(gulp.dest(path.build.fonts));
 });
 
 
 gulp.task('deploy-vendor-jquery', function() {
-	gulp.src(path.vendor.jquery.js)
+	return gulp.src(path.vendor.jquery.js)
 		.pipe(gulp.dest(path.build.js));
 });

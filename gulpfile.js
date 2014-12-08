@@ -2,9 +2,44 @@ var gulp         = require('gulp'),
 	sass         = require('gulp-ruby-sass'),
 	minifyCss    = require('gulp-minify-css'),
 	autoprefixer = require('gulp-autoprefixer'),
-	watch        = require('gulp-watch'),
-	clean        = require('gulp-clean'),
-	favicons     = require('favicons');
+	watch        = require('gulp-watch');
+
+var path = {
+	src : {
+		assets: 'src/app/assets',
+		fonts: 'src/app/assets/fonts/**',
+		images: 'src/app/assets/images/**',
+		html: 'src/app/html/**/*.html',
+		js: 'src/app/assets/js/**',
+		scss: 'src/app/assets/scss/**',
+		scss_main: 'src/app/assets/scss/styles.scss',
+		webroot: 'src/app/assets/webroot/**',
+	},
+	vendor : {
+		bootstrap: {
+			fonts: 'vendor/bootstrap-sass-3.3.1/assets/fonts/**',
+			images: 'vendor/bootstrap-sass-3.3.1/assets/images/**',
+			js: 'vendor/bootstrap-sass-3.3.1/assets/javascripts/**',
+			scss: 'vendor/bootstrap-sass-3.3.1/assets/stylesheets/**',
+			root: 'vendor/bootstrap-sass-3.3.1'
+		},
+		jquery: {
+			js: 'vendor/jquery-2.1.1/assets/js/**',
+			root: 'vendor/jquery-2.1.1'
+		},
+		fontawesome: {
+			fonts: 'vendor/font-awesome-4.2.0/assets/fonts/**',
+			root: 'vendor/font-awesome-4.2.0'
+		}
+	},
+	build: {
+		css: 'build/webroot/css',
+		fonts: 'build/webroot/fonts',
+		images: 'build/webroot/images',
+		js: 'build/webroot/js',
+		webroot: 'build/webroot'
+	}
+};
 
 gulp.task('default', ['build-dev', 'watch']);
 
@@ -13,18 +48,18 @@ gulp.task('watch', function() {
 });
 
 gulp.task('build', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function() {
-	gulp.src('src/app/assets/scss/styles.scss')
+	gulp.src(path.src.scss_main)
 		.pipe(sass())
 		.pipe(autoprefixer())
 		.pipe(minifyCss())
-		.pipe(gulp.dest('build/webroot/css'));
+		.pipe(gulp.dest(path.build.css));
 });
 
 gulp.task('build-dev', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function() {
-	gulp.src('src/app/assets/scss/styles.scss')
+	gulp.src(path.src.scss_main)
 		.pipe(sass())
 		.pipe(autoprefixer())
-		.pipe(gulp.dest('build/webroot/css'));
+		.pipe(gulp.dest(path.build.css));
 });
 
 gulp.task('clean', function () {  
@@ -33,43 +68,43 @@ gulp.task('clean', function () {
 });
 
 gulp.task('deploy-html', function() {
-	gulp.src('src/app/html/*.html')
-		.pipe(gulp.dest('build/webroot'));
+	gulp.src(path.src.html)
+		.pipe(gulp.dest(path.build.webroot));
 });
 
 gulp.task('deploy-assets', function() {
-	gulp.src('src/app/assets/images/**')
-		.pipe(gulp.dest('build/webroot/images'));
+	gulp.src(path.src.images)
+		.pipe(gulp.dest(path.build.images));
 
-	gulp.src('src/app/assets/fonts/**')
-		.pipe(gulp.dest('build/webroot/fonts'));
+	gulp.src(path.src.fonts)
+		.pipe(gulp.dest(path.build.fonts));
 
-	gulp.src('src/app/assets/js/**')
-		.pipe(gulp.dest('build/webroot/js'));
+	gulp.src(path.src.js)
+		.pipe(gulp.dest(path.build.js));
 
-	gulp.src('src/app/assets/webroot/**')
-		.pipe(gulp.dest('build/webroot'));
+	gulp.src(path.src.webroot)
+		.pipe(gulp.dest(path.build.webroot));
 });
 
 gulp.task('vendor', ['vendor-bootstrap', 'vendor-jquery']);
 
 gulp.task('vendor-bootstrap', function() {
 	// Bootstrap
-	gulp.src('vendor/bootstrap-sass-3.3.1/assets/fonts/**')
-		.pipe(gulp.dest('build/webroot/fonts'));
+	gulp.src(path.vendor.bootstrap.fonts)
+		.pipe(gulp.dest(path.build.fonts));
 
-	gulp.src('vendor/bootstrap-sass-3.3.1/assets/images/**')
-		.pipe(gulp.dest('build/webroot/images'));
+	gulp.src(path.vendor.bootstrap.images)
+		.pipe(gulp.dest(path.build.images));
 
-	gulp.src('vendor/bootstrap-sass-3.3.1/assets/javascripts/**')
-		.pipe(gulp.dest('build/webroot/js'));
+	gulp.src(path.vendor.bootstrap.js)
+		.pipe(gulp.dest(path.build.js));
 
 	// Font awesome
-	gulp.src('vendor/font-awesome-4.2.0/fonts/**')
-		.pipe(gulp.dest('build/webroot/fonts'));
+	gulp.src(path.vendor.fontawesome.fonts)
+		.pipe(gulp.dest(path.build.fonts));
 });
 
 gulp.task('vendor-jquery', function() {
-	gulp.src('vendor/jquery-2.1.1/assets/js/**')
-		.pipe(gulp.dest('build/webroot/js'));
+	gulp.src(path.vendor.jquery.js)
+		.pipe(gulp.dest(path.build.js));
 });

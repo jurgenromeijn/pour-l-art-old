@@ -12,7 +12,7 @@ gulp.task('watch', function() {
 	gulp.watch('src/**', ['build-dev']);
 });
 
-gulp.task('build', ['clean', 'vendor', 'deploy-html', 'create-favicon', 'deploy-assets'], function() {
+gulp.task('build', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function() {
 	gulp.src('src/app/assets/scss/styles.scss')
 		.pipe(sass())
 		.pipe(autoprefixer())
@@ -20,7 +20,7 @@ gulp.task('build', ['clean', 'vendor', 'deploy-html', 'create-favicon', 'deploy-
 		.pipe(gulp.dest('build/webroot/css'));
 });
 
-gulp.task('build-dev', ['clean', 'vendor', 'deploy-html', 'create-favicon', 'deploy-assets'], function() {
+gulp.task('build-dev', ['clean', 'vendor', 'deploy-html', 'deploy-assets'], function() {
 	gulp.src('src/app/assets/scss/styles.scss')
 		.pipe(sass())
 		.pipe(autoprefixer())
@@ -30,31 +30,6 @@ gulp.task('build-dev', ['clean', 'vendor', 'deploy-html', 'create-favicon', 'dep
 gulp.task('clean', function () {  
 	// gulp.src('build', {read: false})
 	//  	.pipe(clean());
-});
-
-gulp.task('create-favicon', function() {
-	 favicons({
-	    // I/O
-	    source: 'src/app/assets/images/favicon.png',
-	    dest: 'build/webroot',
-
-	    // Icon Types
-	    android: true,
-	    apple: true,
-	    coast: true,
-	    favicons: true,
-	    firefox: true,
-	    windows: true,
-
-	    // Miscellaneous
-	    html: null,
-	    background: 'none',
-	    tileBlackWhite: true,
-	    manifest: null,
-	    trueColor: false,
-	    logging: false,
-	    callback: null
-	});
 });
 
 gulp.task('deploy-html', function() {
@@ -71,6 +46,9 @@ gulp.task('deploy-assets', function() {
 
 	gulp.src('src/app/assets/js/**')
 		.pipe(gulp.dest('build/webroot/js'));
+
+	gulp.src('src/app/assets/webroot/**')
+		.pipe(gulp.dest('build/webroot'));
 });
 
 gulp.task('vendor', ['vendor-bootstrap', 'vendor-jquery']);

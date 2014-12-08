@@ -28,7 +28,7 @@ var path = {
 			root: 'vendor/jquery-2.1.1'
 		},
 		fontawesome: {
-			fonts: 'vendor/font-awesome-4.2.0/assets/fonts/**',
+			fonts: 'vendor/font-awesome-4.2.0/fonts/**',
 			root: 'vendor/font-awesome-4.2.0'
 		}
 	},

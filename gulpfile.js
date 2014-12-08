@@ -86,7 +86,7 @@ gulp.task('deploy-assets', function() {
 		.pipe(gulp.dest(path.build.webroot));
 });
 
-gulp.task('vendor', ['vendor-bootstrap', 'vendor-jquery']);
+gulp.task('vendor', ['vendor-bootstrap', 'vendor-fontawesome', 'vendor-jquery']);
 
 gulp.task('vendor-bootstrap', function() {
 	// Bootstrap
@@ -98,11 +98,13 @@ gulp.task('vendor-bootstrap', function() {
 
 	gulp.src(path.vendor.bootstrap.js)
 		.pipe(gulp.dest(path.build.js));
+});
 
-	// Font awesome
+gulp.task('vendor-fontawesome', function() {
 	gulp.src(path.vendor.fontawesome.fonts)
 		.pipe(gulp.dest(path.build.fonts));
 });
+
 
 gulp.task('vendor-jquery', function() {
 	gulp.src(path.vendor.jquery.js)

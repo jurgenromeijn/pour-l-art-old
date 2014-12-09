@@ -4,6 +4,7 @@ var gulp         = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	watch        = require('gulp-watch'),
 	merge        = require('merge-stream'),
+	clean        = require('gulp-clean'),
 	imageop      = require('gulp-image-optimization');
 
 var path = {
@@ -53,10 +54,10 @@ gulp.task('watch', function() {
 	gulp.watch(path.vendor.all, ['deploy-assets']);
 });
 
-gulp.task('build', ['clean', 'deploy-vendor', 'deploy-css', 'deploy-html', 'deploy-assets'], function() {
+gulp.task('build', ['deploy-vendor', 'deploy-css', 'deploy-html', 'deploy-assets'], function() {
 });
 
-gulp.task('build-dev', ['clean', 'deploy-vendor', 'deploy-css-dev', 'deploy-html', 'deploy-assets'], function() {
+gulp.task('build-dev', ['deploy-vendor', 'deploy-css-dev', 'deploy-html', 'deploy-assets'], function() {
 });
 
 gulp.task('deploy-css', function() {
@@ -75,8 +76,8 @@ gulp.task('deploy-css-dev', function() {
 });
 
 gulp.task('clean', function () {  
-	// gulp.src('build', {read: false})
-	//  	.pipe(clean());
+	gulp.src(['build', 'tmp'], {read: false})
+	  	.pipe(clean());
 });
 
 gulp.task('deploy-html', function() {

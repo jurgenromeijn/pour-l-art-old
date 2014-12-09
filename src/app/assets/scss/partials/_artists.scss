@@ -6,6 +6,12 @@
 	text-align: center;
 }
 
+.artist + .artist {
+	@media (max-width: $grid-float-breakpoint) {
+		margin-top: 100px;
+	}
+}
+
 .artist_image {
 	border: 5px solid #ffffff;
 	border-radius: 200px;

@@ -24,21 +24,14 @@
 }
 
 .hero_button {
-	display: inline-block;
-	background: $brand-primary;
-	color: #ffffff;
-	font-size: $font-size-large;
-	font-weight: lighter;
 	margin-top: 30px;
-	padding: 15px 45px;
-	text-decoration: none !important;
-}
 
-.hero_button:active {
-	color: #ffffff !important;
-}
+	&.button:active {
+		color: #ffffff !important;
+	}
 
-.hero_button:hover {
-	background: #ffffff;
-	color: $brand-primary;
+	&.button:hover {
+		background: #ffffff;
+		color: $brand-primary;
+	}
 }

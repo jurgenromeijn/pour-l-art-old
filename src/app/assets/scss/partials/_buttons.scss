@@ -1,0 +1,27 @@
+.button {
+	display: inline-block;
+	background: $brand-primary;
+	color: #ffffff;
+	font-weight: lighter;
+	padding: 10px 30px;
+	text-decoration: none !important;
+	transition: color 0.25s, background 0.25s;
+
+	&:active {
+		color: #ffffff !important;
+	}
+
+	&:hover {
+		color: #ffffff;
+		background: $link-hover-color;
+	}
+}
+
+.button-large {
+	font-size: $font-size-large;
+	padding: 15px 45px;
+}
+
+.button-margin-top {
+	margin-top: 19px;
+}

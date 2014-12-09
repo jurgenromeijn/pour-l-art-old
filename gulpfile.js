@@ -3,7 +3,8 @@ var gulp         = require('gulp'),
 	minifyCss    = require('gulp-minify-css'),
 	autoprefixer = require('gulp-autoprefixer'),
 	watch        = require('gulp-watch'),
-	merge        = require('merge-stream');
+	merge        = require('merge-stream'),
+	imageop      = require('gulp-image-optimization');
 
 var path = {
 	src : {
@@ -86,6 +87,11 @@ gulp.task('deploy-html', function() {
 gulp.task('deploy-assets', function() {
 	return merge(
 		gulp.src(path.src.images)
+			.pipe(imageop({
+				optimizationLevel: 3,
+				progressive: true,
+				interlaced: true
+			}))
 			.pipe(gulp.dest(path.build.images)),
 
 		gulp.src(path.src.fonts)
@@ -107,6 +113,11 @@ gulp.task('deploy-vendor-bootstrap', function() {
 			.pipe(gulp.dest(path.build.fonts)),
 
 		gulp.src(path.vendor.bootstrap.images)
+			.pipe(imageop({
+				optimizationLevel: 3,
+				progressive: true,
+				interlaced: true
+			}))
 			.pipe(gulp.dest(path.build.images)),
 
 		gulp.src(path.vendor.bootstrap.js)

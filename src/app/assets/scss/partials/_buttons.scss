@@ -1,7 +1,8 @@
 .button {
-	display: inline-block;
 	background: $brand-primary;
+	border-radius: 2px;
 	color: #ffffff;
+	display: inline-block;
 	font-weight: lighter;
 	padding: 10px 30px;
 	text-decoration: none !important;
@@ -14,6 +15,12 @@
 	&:hover {
 		color: #ffffff;
 		background: $link-hover-color;
+	}
+
+	@media (max-width: $grid-float-breakpoint) {
+		font-size: $font-size-large;
+		width: 80%;
+		max-width: 400px;
 	}
 }
 

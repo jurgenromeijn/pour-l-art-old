@@ -47,7 +47,13 @@ var scrollLink = (function() {
 	$('a.link-scroll').click(function(e) {
 		var target = $(this).attr('href');
 		e.preventDefault();
-		$("html, body").animate({ scrollTop: $(target).offset().top }, 1000);
+		$('html, body').animate({ scrollTop: $(target).offset().top }, 1000);
 		$(this).blur();
 	});
+})();
+
+var mobileSize = (function() {
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		$('.section-hero').height($(window).height());
+	}
 })();

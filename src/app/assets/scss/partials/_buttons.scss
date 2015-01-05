@@ -17,7 +17,7 @@
 		background: $link-hover-color;
 	}
 
-	@media (max-width: $grid-float-breakpoint) {
+	@media (max-width: $grid-float-breakpoint - 1) {
 		font-size: $font-size-large;
 		width: 80%;
 		max-width: 400px;

@@ -7,7 +7,7 @@
 }
 
 .artist + .artist {
-	@media (max-width: $grid-float-breakpoint) {
+	@media (max-width: $grid-float-breakpoint - 1) {
 		margin-top: 100px;
 	}
 }

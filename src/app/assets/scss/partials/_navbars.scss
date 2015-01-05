@@ -10,8 +10,8 @@
 }
 
 .navbar-default.navbar-intro {
+	background: transparent;
 	@media (min-width: $grid-float-breakpoint) {
-		background: transparent;
 		padding: 15px 0;
 	}
 }

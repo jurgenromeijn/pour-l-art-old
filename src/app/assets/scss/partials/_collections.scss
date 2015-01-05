@@ -1,16 +1,24 @@
 .collection {
 	list-style: none;
 	margin-top: 20px;
+	line-height: 2;
 }
 
 .collection-item {
-	background: $gray-lighter;
 	margin-top: 30px;
 }
+.collection-item_name {
+	line-height: 1.2;
+}
 
-.collection-item a {
+.collection-item_link {
 	color: #000000;
+	display: block;
 	text-decoration: none !important;
+}
+
+.collection-item_link:hover {
+	color: #000000;
 }
 
 .collection-item_image {
@@ -32,9 +40,6 @@
 }
 
 .collection-item_price {
-	color: #ffffff;
-	height: 20px;
-	right: 10px;
-	top: -30px;
-	position: absolute;
+	font-weight: lighter;
+	margin-bottom: 11px;
 }

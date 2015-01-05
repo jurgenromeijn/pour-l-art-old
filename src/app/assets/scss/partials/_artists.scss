@@ -7,14 +7,16 @@
 }
 
 .artist + .artist {
-	@media (max-width: $grid-float-breakpoint) {
+	@media (max-width: $grid-float-breakpoint - 1) {
 		margin-top: 100px;
 	}
 }
 
 .artist_image {
 	border: 5px solid #ffffff;
-	border-radius: 200px;
+	border-radius: 150px;
+	width: 70%;
+	max-width: 300px;
 }
 
 .artist_caption {

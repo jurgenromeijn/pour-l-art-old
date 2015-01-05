@@ -22,6 +22,7 @@ var cbpAnimatedHeader = (function() {
 				setTimeout( scrollPage, 100 );
 			}
 		}, false );
+		scrollPage();
 	}
 
 	function scrollPage() {
@@ -47,7 +48,20 @@ var scrollLink = (function() {
 	$('a.link-scroll').click(function(e) {
 		var target = $(this).attr('href');
 		e.preventDefault();
-		$("html, body").animate({ scrollTop: $(target).offset().top }, 1000);
+		$('html, body').animate({ scrollTop: $(target).offset().top }, 1000);
 		$(this).blur();
 	});
+})();
+
+var isMobile = function() {
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		return true;
+	}
+	return false;
+};
+
+var mobileSize = (function() {
+	if(isMobile()) {
+		$('.section-hero').height(Math.max($(window).height(), $(window).width()));
+	}
 })();

@@ -53,8 +53,15 @@ var scrollLink = (function() {
 	});
 })();
 
-var mobileSize = (function() {
+var isMobile = function() {
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		$('.section-hero').height($(window).height());
+		return true;
+	}
+	return false;
+};
+
+var mobileSize = (function() {
+	if(isMobile()) {
+		$('.section-hero').height(Math.max($(window).height(), $(window).width()));
 	}
 })();

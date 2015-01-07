@@ -28,22 +28,22 @@
 			border-bottom: 4px solid $brand-primary;
 		}
 	}
-
-	& .active a,
-	& .active a:hover.
-	& .active a:focus {
-		@media (min-width: $grid-float-breakpoint) {
-			background: transparent;
-			border-bottom: 4px solid $brand-primary;
-			padding-bottom: 10px;
-		}
-
-		@media (max-width: $grid-float-breakpoint-max) {
-			background: $brand-primary;
-			color: #ffffff;
-		}
-	}
 } 
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+	@media (min-width: $grid-float-breakpoint) {
+		background: transparent;
+		border-bottom: 4px solid $brand-primary;
+		padding-bottom: 10px;
+	}
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		background: $brand-primary;
+		color: #ffffff;
+	}
+}
 
 .navbar-toggle {
 	background: $brand-primary;

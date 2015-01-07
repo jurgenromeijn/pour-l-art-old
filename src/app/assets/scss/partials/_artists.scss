@@ -4,11 +4,11 @@
 .artist {
 	margin-top: 50px;
 	text-align: center;
-}
 
-.artist + .artist {
 	@media (max-width: $grid-float-breakpoint-max) {
-		margin-top: 100px;
+		& + .artist {
+			margin-top: 100px;
+		}
 	}
 }
 

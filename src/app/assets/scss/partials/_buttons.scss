@@ -17,18 +17,18 @@
 		background: $link-hover-color;
 	}
 
+	.button-large {
+		font-size: $font-size-large;
+		padding: 15px 45px;
+	}
+
+	.button-margin-top {
+		margin-top: 19px;
+	}
+
 	@media (max-width: $grid-float-breakpoint-max) {
 		font-size: $font-size-large;
 		width: 80%;
 		max-width: 400px;
 	}
-}
-
-.button-large {
-	font-size: $font-size-large;
-	padding: 15px 45px;
-}
-
-.button-margin-top {
-	margin-top: 19px;
 }

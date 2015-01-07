@@ -16,6 +16,20 @@
 	}
 }
 
+.navbar-default .navbar-nav a {
+	border-bottom: 4px solid transparent;
+	padding-bottom: 10px;
+
+	transition: color 0.2s, border-color 0.4s;
+
+	&:hover {
+		@media (min-width: $grid-float-breakpoint) {
+			background: transparent;
+			border-bottom: 4px solid $brand-primary;
+		}
+	}
+} 
+
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
@@ -25,7 +39,7 @@
 		padding-bottom: 10px;
 	}
 
-	@media (max-width: $grid-float-breakpoint) {
+	@media (max-width: $grid-float-breakpoint-max) {
 		background: $brand-primary;
 		color: #ffffff;
 	}
@@ -44,7 +58,7 @@
 .navbar-collapse {
 	border-top: 0 solid transparent;
 	box-shadow: none;
-	@media (max-width: $grid-float-breakpoint - 1) {
+	@media (max-width: $grid-float-breakpoint-max) {
 		background: $gray-dark;
 	}
 }

@@ -1,6 +1,9 @@
 .article-small {
 	margin-top: 50px;
 	text-align: center;
+	@media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
+		margin-top: 20px;
+	}
 }
 
 .article-small + .article-small {

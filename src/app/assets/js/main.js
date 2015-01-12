@@ -62,6 +62,10 @@ var isMobile = function() {
 
 var mobileSize = (function() {
 	if(isMobile()) {
-		$('.section-hero').height(Math.max($(window).height(), $(window).width()));
+		$('.section-hero').height($(window).height());
+
+		$(window).on("orientationchange", function(){
+			$('.section-hero').height($(window).height());
+		});
 	}
 })();

@@ -5,7 +5,8 @@ var gulp         = require('gulp'),
 	watch        = require('gulp-watch'),
 	merge        = require('merge-stream'),
 	clean        = require('gulp-clean'),
-	imageop      = require('gulp-image-optimization');
+	imageop      = require('gulp-image-optimization'),
+	fileinclude  = require('gulp-file-include');
 
 var path = {
 	src : {
@@ -82,6 +83,10 @@ gulp.task('clean', function () {
 
 gulp.task('deploy-html', function() {
 	return gulp.src(path.src.html)
+		.pipe(fileinclude({
+		  prefix: '@@',
+		  basepath: '@file'
+		}))
 		.pipe(gulp.dest(path.build.webroot));
 });
 

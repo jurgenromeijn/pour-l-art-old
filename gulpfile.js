@@ -6,14 +6,14 @@ var gulp         = require('gulp'),
 	merge        = require('merge-stream'),
 	clean        = require('gulp-clean'),
 	imageop      = require('gulp-image-optimization'),
-	fileinclude  = require('gulp-file-include');
+	swig         = require('gulp-swig');
 
 var path = {
 	src : {
 		assets: 'src/app/assets/**',
 		fonts: 'src/app/assets/fonts/**',
 		images: 'src/app/assets/images/**',
-		html: 'src/app/html/**/*.html',
+		templates: 'src/app/templates/*.html',
 		js: 'src/app/assets/js/**',
 		scss: 'src/app/assets/scss/**',
 		scss_main: 'src/app/assets/scss/styles.scss',
@@ -82,11 +82,8 @@ gulp.task('clean', function () {
 });
 
 gulp.task('deploy-html', function() {
-	return gulp.src(path.src.html)
-		.pipe(fileinclude({
-		  prefix: '@@',
-		  basepath: '@file'
-		}))
+	return gulp.src(path.src.templates)
+		.pipe(swig())
 		.pipe(gulp.dest(path.build.webroot));
 });
 

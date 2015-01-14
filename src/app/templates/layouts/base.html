@@ -28,13 +28,11 @@
 	<body>
 		{% block page %}
 			{% include "../sections/header.html" %}
-
 			<div class="content" id="intro">
 				{% block content %}
 				{% endblock %}
 				{% include "../sections/footer.html" %}
 			</div>
-
 		{% endblock %}
 		{% block scripts %}
 			<script src="js/jquery.js"></script>

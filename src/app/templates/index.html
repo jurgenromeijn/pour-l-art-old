@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		{% include "sections/head.html" %}
-	</head>
-	<body>
-		{% include "sections/header.html" %}
-		<div class="content" id="intro">
-			{% include "sections/hero.html" %}
+{% extends 'layouts/base.html' %}
 
-			{% include "sections/index/services.html" %}
-			{% include "sections/index/artists.html" %}
-			{% include "sections/index/collection.html" %}
+{% block content %}
+	{% include "sections/hero.html" %}
 
-			{% include "sections/quote.html" %}
-			{% include "sections/footer.html" %}
-		</div>
-		{% include "sections/scripts.html" %}
-	</body>
-</html>
+	{% include "sections/index/services.html" %}
+	{% include "sections/index/artists.html" %}
+	{% include "sections/index/collection.html" %}
+
+	{% include "sections/quote.html" %}
+{% endblock %}

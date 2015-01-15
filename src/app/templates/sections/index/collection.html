@@ -5,7 +5,7 @@
 			<p class="section_tagline">De nieuwste aanwinsten</p> 
 		</header>
 		<div class="row collection">
-			{% for collectionItem in index.collection -%}
+			{% for collectionItem in index.collection %}
 				<div class="col-md-4 col-sm-6">
 					{% include "../../blocks/collection_item.html" collectionItem %}
 				</div>

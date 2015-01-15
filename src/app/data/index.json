@@ -53,5 +53,34 @@
 				}
 			}
 		]
+	},
+	"header": {
+		"active": "/",
+		"navigation": [
+			{
+				"name": "Home",
+				"url": "/"
+			},
+			{
+				"name": "Shop",
+				"url": "/shop.html"
+			},
+			{
+				"name": "Wedstrijd",
+				"url": "/wedstrijd.html"
+			},
+			{
+				"name": "Workshops &amp; lezingen",
+				"url": "/workshop.html"
+			},
+			{
+				"name": "Over",
+				"url": "/over.html"
+			},
+			{
+				"name": "Contact",
+				"url": "/contact.html"
+			}
+		]
 	}
 }

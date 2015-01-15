@@ -11,12 +11,9 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="/">Home</a></li>
-				<li><a href="">Shop</a></li>
-				<li><a href="">Wedstrijd</a></li>
-				<li><a href="">Workshops &amp; lezingen</a></li>
-				<li><a href="">Over</a></li>
-				<li><a href="">Contact</a></li>
+				{% for navigationItem in header.navigation %}
+					<li{% if navigationItem.url == header.active %} class="active"{% endif %}><a href="{{ navigationItem.url }}">{{ navigationItem.name }}</a></li>
+				{% endfor %}
 			</ul>
 		</div>
 	</div>

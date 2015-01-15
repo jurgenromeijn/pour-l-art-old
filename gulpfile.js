@@ -5,14 +5,18 @@ var gulp         = require('gulp'),
 	watch        = require('gulp-watch'),
 	merge        = require('merge-stream'),
 	clean        = require('gulp-clean'),
-	imageop      = require('gulp-image-optimization');
+	imageop      = require('gulp-image-optimization'),
+	swig         = require('gulp-swig'),
+	data         = require('gulp-data');
 
 var path = {
 	src : {
 		assets: 'src/app/assets/**',
+		data: 'src/app/data/',
 		fonts: 'src/app/assets/fonts/**',
 		images: 'src/app/assets/images/**',
-		html: 'src/app/html/**/*.html',
+		templates: 'src/app/templates/**',
+		templates_main: 'src/app/templates/*.html',
 		js: 'src/app/assets/js/**',
 		scss: 'src/app/assets/scss/**',
 		scss_main: 'src/app/assets/scss/styles.scss',
@@ -50,7 +54,7 @@ gulp.task('default', ['build-dev', 'watch']);
 gulp.task('watch', function() {
 	gulp.watch([path.src.assets, '!' + path.src.scss], ['deploy-assets']);
 	gulp.watch(path.src.scss, ['deploy-css-dev']);
-	gulp.watch(path.src.html, ['deploy-html']);
+	gulp.watch(path.src.templates, ['deploy-html']);
 	gulp.watch(path.vendor.all, ['deploy-assets']);
 });
 
@@ -81,7 +85,11 @@ gulp.task('clean', function () {
 });
 
 gulp.task('deploy-html', function() {
-	return gulp.src(path.src.html)
+	return gulp.src(path.src.templates_main)
+		.pipe(swig({
+			load_json: true,
+  			json_path: path.src.data,
+		}))
 		.pipe(gulp.dest(path.build.webroot));
 });
 

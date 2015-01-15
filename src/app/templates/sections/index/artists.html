@@ -1,0 +1,13 @@
+<section class="section-alternative" id="artist-of-the-month">
+	<div class="container">
+		<header class="section_header">
+			<h2>Kunstenaars van de maand</h2>
+			<p class="section_tagline">Een stukje toelichting over de kunstenaars van de maand</p> 
+		</header>
+		<div class="row artists">
+			{% for artist in index.artists %}
+				{% include "../../blocks/artist.html" artist %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

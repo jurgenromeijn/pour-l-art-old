@@ -13,7 +13,8 @@ var path = {
 		assets: 'src/app/assets/**',
 		fonts: 'src/app/assets/fonts/**',
 		images: 'src/app/assets/images/**',
-		templates: 'src/app/templates/*.html',
+		templates: 'src/app/templates/**',
+		templates_main: 'src/app/templates/*.html',
 		js: 'src/app/assets/js/**',
 		scss: 'src/app/assets/scss/**',
 		scss_main: 'src/app/assets/scss/styles.scss',
@@ -51,7 +52,7 @@ gulp.task('default', ['build-dev', 'watch']);
 gulp.task('watch', function() {
 	gulp.watch([path.src.assets, '!' + path.src.scss], ['deploy-assets']);
 	gulp.watch(path.src.scss, ['deploy-css-dev']);
-	gulp.watch(path.src.html, ['deploy-html']);
+	gulp.watch(path.src.templates, ['deploy-html']);
 	gulp.watch(path.vendor.all, ['deploy-assets']);
 });
 
@@ -82,7 +83,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('deploy-html', function() {
-	return gulp.src(path.src.templates)
+	return gulp.src(path.src.templates_main)
 		.pipe(swig())
 		.pipe(gulp.dest(path.build.webroot));
 });

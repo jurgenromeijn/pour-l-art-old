@@ -6,11 +6,13 @@ var gulp         = require('gulp'),
 	merge        = require('merge-stream'),
 	clean        = require('gulp-clean'),
 	imageop      = require('gulp-image-optimization'),
-	swig         = require('gulp-swig');
+	swig         = require('gulp-swig'),
+	data         = require('gulp-data');
 
 var path = {
 	src : {
 		assets: 'src/app/assets/**',
+		data: 'src/app/data/',
 		fonts: 'src/app/assets/fonts/**',
 		images: 'src/app/assets/images/**',
 		templates: 'src/app/templates/**',
@@ -84,7 +86,10 @@ gulp.task('clean', function () {
 
 gulp.task('deploy-html', function() {
 	return gulp.src(path.src.templates_main)
-		.pipe(swig())
+		.pipe(swig({
+			load_json: true,
+  			json_path: path.src.data,
+		}))
 		.pipe(gulp.dest(path.build.webroot));
 });
 

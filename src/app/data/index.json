@@ -26,6 +26,32 @@
 					"link": ""
 				}
 			}
+		],
+		"artists": [
+			{
+				"artist": {
+					"image": "images/winners/1.jpg",
+					"name": "Kay Garland",
+					"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+					"link": ""
+				}
+			},
+			{
+				"artist": {
+					"image": "images/winners/2.jpg",
+					"name": "Larry Parker",
+					"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+					"link": ""
+				}
+			},
+			{
+				"artist": {
+					"image": "images/winners/3.jpg",
+					"name": "Diana Pertersen",
+					"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+					"link": ""
+				}
+			}
 		]
 	}
 }

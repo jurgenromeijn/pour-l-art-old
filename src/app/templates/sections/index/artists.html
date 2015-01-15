@@ -5,30 +5,9 @@
 			<p class="section_tagline">Een stukje toelichting over de kunstenaars van de maand</p> 
 		</header>
 		<div class="row artists">
-			<figure class="col-sm-4 artist">
-				<img src="images/winners/1.jpg" alt="naam" class="artist_image" />
-				<figcaption class="artist_caption">
-					<h3>Kay Garland</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					<a href="" class="button button-margin-top">Meer info</a>
-				</figcaption>
-			</figure>
-			<figure class="col-sm-4 artist">
-				<img src="images/winners/2.jpg" alt="naam" class="artist_image" />
-				<figcaption class="artist_caption">
-					<h3>Larry Parker</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					<a href="" class="button button-margin-top">Meer info</a>
-				</figcaption>
-			</figure>
-			<figure class="col-sm-4 artist">
-				<img src="images/winners/3.jpg" alt="naam" class="artist_image" />
-				<figcaption class="artist_caption">
-					<h3>Diana Pertersen</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					<a href="" class="button button-margin-top">Meer info</a>
-				</figcaption>
-			</figure>
+			{% for artist in index.artists -%}
+				{% include "../../blocks/artist.html" artist %}
+			{% endfor %}
 		</div>
 	</div>
 </section>

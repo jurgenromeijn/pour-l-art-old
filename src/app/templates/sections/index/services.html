@@ -5,8 +5,8 @@
 			<p class="section_tagline">Dit is wat we aanbieden</p>
 		</header>
 		<div class="row">
-			{% for item in index.services %}
-				{% include "../../blocks/article_small.html" item %}
+			{% for service in index.services %}
+				{% include "../../blocks/article_small.html" service %}
 			{% endfor %}
 		</div>
 	</div>

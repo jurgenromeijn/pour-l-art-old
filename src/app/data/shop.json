@@ -1,0 +1,32 @@
+{
+	"collection": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+	"header": {
+		"active": "/shop.html",
+		"navigation": [
+			{
+				"name": "Home",
+				"url": "/"
+			},
+			{
+				"name": "Shop",
+				"url": "/shop.html"
+			},
+			{
+				"name": "Wedstrijd",
+				"url": "/wedstrijd.html"
+			},
+			{
+				"name": "Workshops &amp; lezingen",
+				"url": "/workshops.html"
+			},
+			{
+				"name": "Over",
+				"url": "/over.html"
+			},
+			{
+				"name": "Contact",
+				"url": "/contact.html"
+			}
+		]
+	}
+}

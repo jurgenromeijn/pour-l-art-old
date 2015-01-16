@@ -5,7 +5,7 @@
 			<p class="section_tagline">Een stukje toelichting over de kunstenaars van de maand</p> 
 		</header>
 		<div class="row artists">
-			{% for artist in index.artists %}
+			{% for artist in artists %}
 				{% include "../../blocks/artist.html" artist %}
 			{% endfor %}
 		</div>

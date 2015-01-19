@@ -1,7 +1,7 @@
-<fieldset>
-	<legend>{{ filter.name }}</legend>
+<fieldset class="filter">
+	<legend class="filter_header">{{ filter.name }}</legend>
 	{% for option in filter.options %}
-		<div class="checkbox">
+		<div class="checkbox filter_option">
 			<label>
 				<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" /> {{option.name}}
 			</label>

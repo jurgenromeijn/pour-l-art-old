@@ -1,17 +1,23 @@
 <section class="section">
 	<div class="container">
-		<header class="section_header" id="collection">
-			<h2>Collectie</h2>
-			<p class="section_tagline">De nieuwste aanwinsten</p> 
-		</header>
-		<div class="row collection col-md-9">
-			{% for collectionItem in collection %}
-				<div class="col-md-4">
-					{% include "../../blocks/collection_item.html" collectionItem %}
-				</div>
-			{% endfor %}
+		<div class="row col-md-9 shop">
+			<div class="col-md-12">
+				<span class="pull-left">Sorteer op:</span>
+				<ul class="list-inline">
+					{% for option in sort %}
+						<li><a href="">{{ option }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="shop_items">
+				{% for collectionItem in collection %}
+					<div class="col-md-4">
+						{% include "../../blocks/collection_item.html" collectionItem %}
+					</div>
+				{% endfor %}
+			</div>
 		</div>
-		<form action="shop.html" method="get" class="col-md-3">
+		<form action="shop.html" method="get" class="col-md-3 filters">
 			{% for filter in filters %}
 				{% include "../../blocks/filter.html" filter %}
 			{% endfor %}

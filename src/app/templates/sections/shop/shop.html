@@ -1,5 +1,10 @@
 <section class="section">
 	<div class="container">
+		<form action="shop.html" method="get" class="col-md-3 filters">
+			{% for filter in filters %}
+				{% include "../../blocks/filter.html" filter %}
+			{% endfor %}
+		</form>
 		<div class="row col-md-9 shop">
 			<div class="col-md-12">
 				<div class="btn-group" role="group">
@@ -23,11 +28,6 @@
 				{% endfor %}
 			</div>
 		</div>
-		<form action="shop.html" method="get" class="col-md-3 filters">
-			{% for filter in filters %}
-				{% include "../../blocks/filter.html" filter %}
-			{% endfor %}
-		</form>
 		<div class="col-md-12">
 			<nav class="text-center">
 				<ul class="pagination">

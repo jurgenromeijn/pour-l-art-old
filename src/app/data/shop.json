@@ -1,5 +1,39 @@
 {
 	"collection": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+	"filters": [
+		{
+			"filter": {
+				"name": "Kleur",
+				"breakpoint": "md",
+				"options": [
+					{
+						"id": 0,
+						"value": "Zwart"
+					},
+					{
+						"id": 1,
+						"value": "Wit"
+					},	
+					{
+						"id": 2,
+						"value": "Rood"
+					},
+					{
+						"id": 3,
+						"value": "Blauw"
+					},
+					{
+						"id": 4,
+						"value": "Geel"
+					},
+					{
+						"id": 5,
+						"value": "Groen"
+					}
+				]
+			}
+		}
+	],
 	"header": {
 		"active": "/shop.html",
 		"navigation": [

@@ -11,5 +11,10 @@
 				</div>
 			{% endfor %}
 		</div>
+		<div class="col-md-3">
+			{% for filter in filters %}
+				{% include "../../blocks/filter.html" filter %}
+			{% endfor %}
+		</div>
 	</div>
 </section>

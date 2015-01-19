@@ -8,27 +8,27 @@
 				"options": [
 					{
 						"id": 0,
-						"value": "Zwart"
+						"name": "Zwart"
 					},
 					{
 						"id": 1,
-						"value": "Wit"
+						"name": "Wit"
 					},	
 					{
 						"id": 2,
-						"value": "Rood"
+						"name": "Rood"
 					},
 					{
 						"id": 3,
-						"value": "Blauw"
+						"name": "Blauw"
 					},
 					{
 						"id": 4,
-						"value": "Geel"
+						"name": "Geel"
 					},
 					{
 						"id": 5,
-						"value": "Groen"
+						"name": "Groen"
 					}
 				]
 			}

@@ -11,10 +11,10 @@
 				</div>
 			{% endfor %}
 		</div>
-		<div class="col-md-3">
+		<form action="shop.html" method="get" class="col-md-3">
 			{% for filter in filters %}
 				{% include "../../blocks/filter.html" filter %}
 			{% endfor %}
-		</div>
+		</form>
 	</div>
 </section>

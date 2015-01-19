@@ -1,1 +1,10 @@
-
+<fieldset>
+	<legend>{{ filter.name }}</legend>
+	{% for option in filter.options %}
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" /> {{option.name}}
+			</label>
+		</div>
+	{% endfor %}
+</fieldset>

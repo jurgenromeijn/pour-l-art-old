@@ -1,0 +1,20 @@
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+	border-bottom-left-radius: 2px;
+	border-top-left-radius: 2px;
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.pagination > li > a:hover, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:focus {
+	color: #16a085;
+	background-color: #ddd;
+	border-color: transparent;
+}
+
+.pagination > li > a, .pagination > li > span {
+	background-color: #eee;
+	border: 1px solid transparent;
+}

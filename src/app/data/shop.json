@@ -33,7 +33,7 @@
 		},
 		{
 			"filter": {
-				"name": "Stijl",
+				"name": "Stroming",
 				"breakpoint": "md",
 				"options": [
 					{
@@ -46,7 +46,7 @@
 					},	
 					{
 						"id": 2,
-						"name": "Reneisance"
+						"name": "Renaissance"
 					},
 					{
 						"id": 3,
@@ -58,7 +58,7 @@
 					},
 					{
 						"id": 5,
-						"name": "Impresionisme"
+						"name": "Impressionisme"
 					}
 				]
 			}

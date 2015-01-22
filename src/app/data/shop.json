@@ -94,6 +94,13 @@
 					}
 				]
 			}
+		},
+		{
+			"filter": {
+				"name": "Prijs",
+				"breakpoint": "md",
+				"type": "price"
+			}
 		}
 	], 
 	"header": {

@@ -1,6 +1,6 @@
 <section class="section">
 	<div class="container">
-		<form action="shop.html" method="get" class="col-md-3 filters">
+		<form action="shop.html" method="get" class="col-sm-3 col-lg-2 filters">
 			{% for filter in filters %}
 				{% if filter.filter.type == "price" %}
 					{% include "../../blocks/filter_price.html" filter %}
@@ -9,7 +9,7 @@
 				{% endif %}
 			{% endfor %}
 		</form>
-		<div class="row col-md-9 shop">
+		<div class="row col-sm-9 col-lg-10 shop">
 			<div class="col-md-12">
 				<div>
 					<span style="margin-right: 10px;">Sorteer op:</span>
@@ -24,7 +24,6 @@
 							{% endfor %}
 						</ul>
 					</div>
-					<span style="margin-right: 10px;">Volgorde:</span>
 					<div class="btn-group">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 							Aflopend
@@ -45,7 +44,7 @@
 			</div>
 			<div class="shop_items row">
 				{% for collectionItem in collection %}
-					<div class="col-md-4">
+					<div class="col-sm-6 col-md-4">
 						{% include "../../blocks/collection_item.html" collectionItem %}
 					</div>
 				{% endfor %}

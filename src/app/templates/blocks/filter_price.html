@@ -1,5 +1,59 @@
 {% extends "filter.html" %}
 
+
 {% block options %}
-	<input type="range" max="1000" min="0" />
+	<div class="row">
+		<div class="col-xs-6">
+			<label>Minimum</label>
+			<select class="form-control">
+				<option value="0" selected="selected">&euro; 0,-</option>
+				<option value="50">&euro; 50,-</option>
+				<option value="100">&euro; 100,-</option>
+				<option value="150">&euro; 150,-</option>
+				<option value="200">&euro; 200,-</option>
+				<option value="250">&euro; 250,-</option>
+				<option value="300">&euro; 300,-</option>
+				<option value="350">&euro; 350,-</option>
+				<option value="400">&euro; 400,-</option>
+				<option value="450">&euro; 450,-</option>
+				<option value="500">&euro; 500,-</option>
+				<option value="550">&euro; 550,-</option>
+				<option value="600">&euro; 600,-</option>
+				<option value="650">&euro; 650,-</option>
+				<option value="700">&euro; 700,-</option>
+				<option value="750">&euro; 750,-</option>
+				<option value="800">&euro; 800,-</option>
+				<option value="850">&euro; 850,-</option>
+				<option value="900">&euro; 900,-</option>
+				<option value="950">&euro; 950,-</option>
+				<option value="1000">&euro; 1000,-</option>
+			</select>
+		</div>
+		<div class="col-xs-6">
+			<label>Maximum</label>
+			<select class="form-control">
+				<option value="0">&euro; 0,-</option>
+				<option value="50">&euro; 50,-</option>
+				<option value="100">&euro; 100,-</option>
+				<option value="150">&euro; 150,-</option>
+				<option value="200">&euro; 200,-</option>
+				<option value="250">&euro; 250,-</option>
+				<option value="300">&euro; 300,-</option>
+				<option value="350">&euro; 350,-</option>
+				<option value="400">&euro; 400,-</option>
+				<option value="450">&euro; 450,-</option>
+				<option value="500">&euro; 500,-</option>
+				<option value="550">&euro; 550,-</option>
+				<option value="600">&euro; 600,-</option>
+				<option value="650">&euro; 650,-</option>
+				<option value="700">&euro; 700,-</option>
+				<option value="750">&euro; 750,-</option>
+				<option value="800">&euro; 800,-</option>
+				<option value="850">&euro; 850,-</option>
+				<option value="900">&euro; 900,-</option>
+				<option value="950">&euro; 950,-</option>
+				<option value="1000" selected="selected">&euro; 1000,-</option>
+			</select>
+		</div>
+	</div>
 {% endblock %}

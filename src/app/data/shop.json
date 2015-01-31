@@ -103,6 +103,7 @@
 			}
 		}
 	], 
+	"intro": false,
 	"header": {
 		"active": "/shop.html",
 		"navigation": [

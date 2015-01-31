@@ -52,6 +52,7 @@
 			}
 		}
 	],
+	"intro": true,
 	"header": {
 		"active": "/",
 		"navigation": [

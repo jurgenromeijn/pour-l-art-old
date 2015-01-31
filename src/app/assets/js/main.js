@@ -27,7 +27,7 @@ var cbpAnimatedHeader = (function() {
 	}
 
 	function scrollPage() {
-		if (intro.lenth > 0) {
+		if (intro.length > 0) {
 			var sy = scrollY();
 			if ( sy >= changeHeaderOn ) {
 				header.removeClass('navbar-intro')

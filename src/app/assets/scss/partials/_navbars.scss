@@ -1,12 +1,15 @@
 .navbar-default {
 	border: 0 solid #000000;
 	transition: padding 0.5s, background 0.5s;
+	height: 60px;
 }
 
 .navbar-default .navbar-brand {
 	font-family: $headings-font-family;
 	font-size: $font-size-large * 2;
-	line-height: $line-height-computed * 1.5;
+	line-height: $line-height-computed;
+	height: 60px;
+	padding: (60px - $line-height-computed) / 2;
 }
 
 .navbar-default.navbar-intro {
@@ -15,7 +18,7 @@
 
 .navbar-default .navbar-nav a {
 	border-bottom: 4px solid transparent;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 
 	transition: color 0.2s, border-color 0.4s;
 
@@ -33,7 +36,7 @@
 	@media (min-width: $grid-float-breakpoint) {
 		background: transparent;
 		border-bottom: 4px solid $brand-primary;
-		padding-bottom: 10px;
+		padding-bottom: 15px;
 	}
 
 	@media (max-width: $grid-float-breakpoint-max) {
@@ -50,6 +53,10 @@
 .navbar-nav {
 	margin: 0 -15px;
 	text-align: center;
+	& > li a {
+		padding-top: 19px;
+		padding-bottom: 19px;
+	}
 }
 
 .navbar-collapse {

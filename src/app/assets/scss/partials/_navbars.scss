@@ -11,9 +11,6 @@
 
 .navbar-default.navbar-intro {
 	background: transparent;
-	@media (min-width: $grid-float-breakpoint) {
-		padding: 15px 0;
-	}
 }
 
 .navbar-default .navbar-nav a {

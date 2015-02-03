@@ -1,0 +1,12 @@
+<fieldset class="filter">
+	<legend class="filter_header">{{ filter.name }}</legend>
+	{% block options %}
+		{% for option in filter.options %}
+			<div class="checkbox filter_option">
+				<label>
+					<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" /> {{option.name}}
+				</label>
+			</div>
+		{% endfor %}
+	{% endblock %}
+</fieldset>

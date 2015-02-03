@@ -1,0 +1,15 @@
+<section class="section">
+	<div class="container">
+		<header class="section_header" id="collection">
+			<h2>Collectie</h2>
+			<p class="section_tagline">De nieuwste aanwinsten</p> 
+		</header>
+		<div class="row collection">
+			{% for collectionItem in collection %}
+				<div class="col-md-4 col-sm-6">
+					{% include "../../blocks/collection_item.html" collectionItem %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

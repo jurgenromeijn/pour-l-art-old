@@ -10,9 +10,10 @@
  */
 var cbpAnimatedHeader = (function() {
 
-	var docElem = document.documentElement,
-		header = $( '.navbar-default' ),
-		didScroll = false,
+	var docElem        = document.documentElement,
+		header         = $('.navbar-default'),
+		intro          = $('#intro'),
+		didScroll      = false,
 		changeHeaderOn = 1;
 
 	function init() {
@@ -26,12 +27,14 @@ var cbpAnimatedHeader = (function() {
 	}
 
 	function scrollPage() {
-		var sy = scrollY();
-		if ( sy >= changeHeaderOn ) {
-			header.removeClass('navbar-intro')
-		}
-		else {
-			header.addClass('navbar-intro');
+		if (intro.length > 0) {
+			var sy = scrollY();
+			if ( sy >= changeHeaderOn ) {
+				header.removeClass('navbar-intro')
+			}
+			else {
+				header.addClass('navbar-intro');
+			}
 		}
 		didScroll = false;
 	}

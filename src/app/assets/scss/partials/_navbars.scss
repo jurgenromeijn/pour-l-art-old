@@ -7,9 +7,9 @@
 .navbar-default .navbar-brand {
 	font-family: $headings-font-family;
 	font-size: $font-size-large * 2;
-	line-height: $line-height-computed;
+	line-height: $font-size-large * 2;
 	height: 60px;
-	padding: (60px - $line-height-computed) / 2;
+	padding: ((60px - ($font-size-large * 2)) / 2) 15px;
 }
 
 .navbar-default.navbar-intro {
@@ -22,11 +22,9 @@
 
 	transition: color 0.2s, border-color 0.4s;
 
-	&:hover {
-		@media (min-width: $grid-float-breakpoint) {
-			background: transparent;
-			border-bottom: 4px solid $brand-primary;
-		}
+	@media (max-width: $grid-float-breakpoint-max) {
+		padding-top: 14px;
+		padding-bottom: 10px;
 	}
 } 
 
@@ -36,7 +34,6 @@
 	@media (min-width: $grid-float-breakpoint) {
 		background: transparent;
 		border-bottom: 4px solid $brand-primary;
-		padding-bottom: 15px;
 	}
 
 	@media (max-width: $grid-float-breakpoint-max) {
@@ -48,6 +45,7 @@
 .navbar-toggle {
 	background: $brand-primary;
 	border-radius: 2px;
+	padding: 14px 15px;
 }
 
 .navbar-nav {

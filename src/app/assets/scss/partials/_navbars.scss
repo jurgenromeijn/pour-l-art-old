@@ -7,9 +7,9 @@
 .navbar-default .navbar-brand {
 	font-family: $headings-font-family;
 	font-size: $font-size-large * 2;
-	line-height: $line-height-computed;
+	line-height: $font-size-large * 2;
 	height: 60px;
-	padding: (60px - $line-height-computed) / 2;
+	padding: ((60px - ($font-size-large * 2)) / 2) 15px;
 }
 
 .navbar-default.navbar-intro {

@@ -41,6 +41,7 @@
 				</div>
 			</div>
 			<form action="shop.html" method="get" class="col-sm-3 col-lg-2 filters collapse" id="filters">
+				<div class="filters_body">
 					{% for filter in filters %}
 						{% if filter.filter.type == "price" %}
 							{% include "../../blocks/filter_price.html" filter %}
@@ -48,6 +49,7 @@
 							{% include "../../blocks/filter.html" filter %}
 						{% endif %}
 					{% endfor %}
+				</div>
 			</form>
 			<div class="col-sm-9 col-lg-10 shop">
 				<div class="shop_items row">

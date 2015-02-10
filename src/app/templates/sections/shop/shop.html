@@ -5,74 +5,78 @@
 				<h2>Webshop</h2>
 				<p class="section_tagline">Hier koopt u niet alleen kunst, maar ook een verhaal.</p> 
 			</header>
-			<form action="shop.html" method="get" class="col-sm-3 col-lg-2 filters">
-				{% for filter in filters %}
-					{% if filter.filter.type == "price" %}
-						{% include "../../blocks/filter_price.html" filter %}
-					{% else %}
-						{% include "../../blocks/filter.html" filter %}
-					{% endif %}
-				{% endfor %}
+			<div class="col-sm-9 col-lg-10 col-sm-offset-3 col-lg-offset-2 sorting">
+				<div class="sorting row">
+					<div class="col-xs-3">
+						<div class="btn-group hidden-xs" role="group">
+							<button type="button" class="btn btn-default"><i class="fa fa-th-list"></i></button>
+							<button type="button" class="btn btn-default"><i class="fa fa-th-large"></i></button>
+						</div>
+						<button class="btn btn-primary visible-xs" type="button" data-toggle="collapse" data-target="#filters" aria-expanded="false" aria-controls="filters">Filters</button>
+					</div>
+					<div class="col-xs-9 text-right">
+						<span style="margin-right: 10px;">Sorteer op:</span>
+						<div class="btn-group" style="margin-right: 10px;">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								{{ sort[0] }}
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								{% for option in sort %}
+									<li><a href="#">{{ option }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								Aflopend
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Aflopend</a></li>
+								<li><a href="#">Oplopend</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<form action="shop.html" method="get" class="col-sm-3 col-lg-2 filters collapse" id="filters">
+					{% for filter in filters %}
+						{% if filter.filter.type == "price" %}
+							{% include "../../blocks/filter_price.html" filter %}
+						{% else %}
+							{% include "../../blocks/filter.html" filter %}
+						{% endif %}
+					{% endfor %}
 			</form>
 			<div class="col-sm-9 col-lg-10 shop">
-			<div class="sorting row">
-				<div class="col-sm-3 hidden-xs">
-					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-default"><i class="fa fa-th-list"></i></button>
-						<button type="button" class="btn btn-default"><i class="fa fa-th-large"></i></button>
-					</div>
+				<div class="shop_items row">
+					{% for collectionItem in collection %}
+						<div class="col-sm-6 col-md-4">
+							{% include "../../blocks/collection_item.html" collectionItem %}
+						</div>
+					{% endfor %}
 				</div>
-				<div class="col-sm-9 text-right">
-					<span style="margin-right: 10px;">Sorteer op:</span>
-					<div class="btn-group" style="margin-right: 10px;">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							{{ sort[0] }}
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							{% for option in sort %}
-								<li><a href="#">{{ option }}</a></li>
-							{% endfor %}
-						</ul>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							Aflopend
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Aflopend</a></li>
-							<li><a href="#">Oplopend</a></li>
-						</ul>
-					</div>
-				</div>
+				<nav class="text-center">
+					<ul class="pagination">
+						<li>
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>
+							<a href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
-			<div class="shop_items row">
-				{% for collectionItem in collection %}
-					<div class="col-sm-6 col-md-4">
-						{% include "../../blocks/collection_item.html" collectionItem %}
-					</div>
-				{% endfor %}
-			</div>
-			<nav class="text-center">
-				<ul class="pagination">
-					<li>
-						<a href="#" aria-label="Previous">
-							<span aria-hidden="true">&laquo;</span>
-						</a>
-					</li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li>
-						<a href="#" aria-label="Next">
-							<span aria-hidden="true">&raquo;</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
 		</div>
 	</div>
 </section>

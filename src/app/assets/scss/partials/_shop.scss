@@ -1,6 +1,31 @@
-.filter, .shop {
+.filters {
+	@media (min-width: $grid-float-breakpoint) {
+		display: block !important;
+		visibility: visible !important;
+		height: auto !important;
+	}
+}
 
+.filter {
 	margin-top: 30px;
+}
+
+.shop {
+	margin-top: 66px;
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		margin-top: 10px;
+	}
+}
+
+.sorting {
+	position: relative;
+	top: 30px;
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		margin-top: 30px;
+		position: static;
+	}
 }
 
 .filter_header {

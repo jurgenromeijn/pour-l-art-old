@@ -1,21 +1,27 @@
 <section class="section">
 	<div class="container">
-		<header class="section_header">
-			<h2>Webshop</h2>
-			<p class="section_tagline">Hier koopt u niet alleen kunst, maar ook een verhaal.</p> 
-		</header>
-		<form action="shop.html" method="get" class="col-sm-3 col-lg-2 filters">
-			{% for filter in filters %}
-				{% if filter.filter.type == "price" %}
-					{% include "../../blocks/filter_price.html" filter %}
-				{% else %}
-					{% include "../../blocks/filter.html" filter %}
-				{% endif %}
-			{% endfor %}
-		</form>
-		<div class="row col-sm-9 col-lg-10 shop">
-			<div class="col-md-12">
-				<div>
+		<div class="row">
+			<header class="section_header">
+				<h2>Webshop</h2>
+				<p class="section_tagline">Hier koopt u niet alleen kunst, maar ook een verhaal.</p> 
+			</header>
+			<form action="shop.html" method="get" class="col-sm-3 col-lg-2 filters">
+				{% for filter in filters %}
+					{% if filter.filter.type == "price" %}
+						{% include "../../blocks/filter_price.html" filter %}
+					{% else %}
+						{% include "../../blocks/filter.html" filter %}
+					{% endif %}
+				{% endfor %}
+			</form>
+			<div class="col-sm-9 col-lg-10 shop">
+				<div class="col-md-3">
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default"><i class="fa fa-th-list"></i></button>
+						<button type="button" class="btn btn-default"><i class="fa fa-th-large"></i></button>
+					</div>
+				</div>
+				<div class="col-md-9 text-right">
 					<span style="margin-right: 10px;">Sorteer op:</span>
 					<div class="btn-group" style="margin-right: 10px;">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -37,13 +43,6 @@
 							<li><a href="#">Aflopend</a></li>
 							<li><a href="#">Oplopend</a></li>
 						</ul>
-				</div>
-				<div class="pull-right">
-					<span style="margin-right: 10px;">Toon als: </span>
-					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-default"><i class="fa fa-th-list"></i></button>
-						<button type="button" class="btn btn-default"><i class="fa fa-th-large"></i></button>
-					</div>
 				</div>
 			</div>
 			<div class="shop_items row">

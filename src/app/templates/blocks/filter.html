@@ -3,8 +3,9 @@
 	{% block options %}
 		{% for option in filter.options %}
 			<div class="checkbox filter_option">
-				<label>
-					<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" /> {{option.name}}
+				<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" id="{{ filter.name|lower }}_{{option.id}}" />
+				<label for="{{ filter.name|lower }}_{{option.id}}">
+					{{option.name}}
 				</label>
 			</div>
 		{% endfor %}

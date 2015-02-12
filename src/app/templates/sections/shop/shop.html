@@ -45,6 +45,8 @@
 					{% for filter in filters %}
 						{% if filter.filter.type == "price" %}
 							{% include "../../blocks/filter_price.html" filter %}
+						{% elseif filter.filter.type == "color" %}
+							{% include "../../blocks/filter_color.html" filter %}
 						{% else %}
 							{% include "../../blocks/filter.html" filter %}
 						{% endif %}

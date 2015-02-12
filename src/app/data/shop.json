@@ -67,30 +67,62 @@
 			"filter": {
 				"name": "Kleur",
 				"breakpoint": "md",
+				"type": "color",
 				"options": [
 					{
-						"id": 0,
-						"name": "Zwart"
+						"id": 3,
+						"colorCode": "#ffffff",
+						"name": "Wit"
+					},
+					{
+						"id": 2,
+						"colorCode": "#bdc3c7",
+						"name": "Grijs"
 					},
 					{
 						"id": 1,
-						"name": "Wit"
-					},	
-					{
-						"id": 2,
-						"name": "Rood"
+						"colorCode": "#000000",
+						"name": "Zwart"
 					},
 					{
-						"id": 3,
-						"name": "Blauw"
+						"id": 0,
+						"colorCode": "#8F2626",
+						"name": "Bruin"
 					},
 					{
 						"id": 4,
-						"name": "Geel"
+						"colorCode": "#FFCAD1",
+						"name": "Roze"
 					},
 					{
 						"id": 5,
+						"colorCode": "#9b59b6",
+						"name": "Paars"
+					},
+					{
+						"id": 6,
+						"colorCode": "#e74c3c",
+						"name": "Rood"
+					},
+					{
+						"id": 7,
+						"colorCode": "#e67e22",
+						"name": "Oranje"
+					},
+					{
+						"id": 8,
+						"colorCode": "#f1c40f",
+						"name": "Geel"
+					},
+					{
+						"id": 9,
+						"colorCode": "#1abc9c",
 						"name": "Groen"
+					},
+					{
+						"id": 10,
+						"colorCode": "#3498db",
+						"name": "Blauw"
 					}
 				]
 			}

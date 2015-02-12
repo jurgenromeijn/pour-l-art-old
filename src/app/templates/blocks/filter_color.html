@@ -1,17 +1,16 @@
-<fieldset class="filter filter-color">
-	<legend class="filter_header">{{ filter.name }}</legend>
-	{% block options %}
-		{% for option in filter.options %}
-			{% set borderColor = option.colorCode %}
-			{% if borderColor == "#ffffff" %}
-				{% set borderColor = "rgba(0, 0, 0, 0.2)" %}
-			{% endif %}
-			<div class="checkbox filter_option">
-				<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" id="{{ filter.name|lower }}_{{option.id}}" />
-				<label for="{{ filter.name|lower }}_{{option.id}}" style="background-color: {{ option.colorCode }}; border-color: {{ borderColor }}">
-					{{option.name}}
-				</label>
-			</div>
-		{% endfor %}
-	{% endblock %}
-</fieldset>
+{% extends "filter.html" %}
+
+{% block options %}
+	{% for option in filter.options %}
+		{% set borderColor = option.colorCode %}
+		{% if borderColor == "#ffffff" %}
+			{% set borderColor = "rgba(0, 0, 0, 0.2)" %}
+		{% endif %}
+		<div class="checkbox filter_option">
+			<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" id="{{ filter.name|lower }}_{{option.id}}" />
+			<label for="{{ filter.name|lower }}_{{option.id}}" style="background-color: {{ option.colorCode }}; border-color: {{ borderColor }}">
+				{{option.name}}
+			</label>
+		</div>
+	{% endfor %}
+{% endblock %}

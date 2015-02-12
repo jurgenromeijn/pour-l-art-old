@@ -17,6 +17,8 @@
 
 .filter {
 	margin-top: 30px;
+	user-select:none;
+
 	@media (max-width: $grid-float-breakpoint-max) {
 		margin-top: 0px;
 		& + .filter {
@@ -50,6 +52,7 @@
 	.checkbox input[type="checkbox"], 
 	.checkbox-inline input[type="checkbox"] {
 		margin-left: 0;
+		cursor: pointer;
 	}
 
 	&.filter-price {

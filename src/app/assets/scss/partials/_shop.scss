@@ -33,7 +33,7 @@
 				background: #ffffff;
 				color: $brand-primary;
 				border-radius: 2px;
-				padding: 5px;
+				padding: 5px 10px;
 			}
 
 			input:checked + label {
@@ -104,6 +104,21 @@
 	@media (max-width: $grid-float-breakpoint-max) {
 		margin-top: 30px;
 		position: static;
+		
+		.text-right > span {
+			display: block;
+			height: 22px;
+			margin-bottom: 11px;
+		}
+
+		.btn-primary {
+			margin-top: 33px;
+		}
+	}
+
+	.text-right span, 
+	.text-right .btn-group {
+		margin-left: 10px;
 	}
 }
 

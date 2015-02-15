@@ -5,7 +5,7 @@
 			<p class="section_tagline">Hier koopt u niet alleen kunst, maar ook een verhaal.</p> 
 		</header>
 		<div class="row">
-			<div class="col-sm-9 col-lg-10 col-sm-offset-3 col-lg-offset-2 sorting">
+			<div class="col-sm-9 col-lg-10 col-sm-offset-3 col-lg-offset-2 sorting form-inline">
 				<div class="sorting row">
 					<div class="col-xs-3">
 						<div class="btn-group hidden-xs" role="group">
@@ -16,27 +16,15 @@
 					</div>
 					<div class="col-xs-9 text-right">
 						<span>Sorteer op:</span>
-						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-								{{ sort[0] }}
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">
-								{% for option in sort %}
-									<li><a href="#">{{ option }}</a></li>
-								{% endfor %}
-							</ul>
-						</div>
-						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-								Aflopend
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Aflopend</a></li>
-								<li><a href="#">Oplopend</a></li>
-							</ul>
-						</div>
+						<select class="form-control">
+							{% for option in sort %}
+								<option>{{ option }}</option>
+							{% endfor %}
+						</select>
+						<select class="form-control">
+							<option>Aflopend</li>
+							<option>Oplopend</li>
+						</select>
 					</div>
 				</div>
 			</div>

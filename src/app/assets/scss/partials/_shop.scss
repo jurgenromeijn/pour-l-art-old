@@ -116,9 +116,10 @@
 		}
 	}
 
-	.text-right span, 
 	.text-right select {
 		margin-left: 10px;
+		width: auto;
+		display: inline-block;
 	}
 }
 

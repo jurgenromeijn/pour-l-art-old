@@ -1,0 +1,10 @@
+.btn {
+	border-radius: 2px;
+}
+
+.form-control-default {
+	@extend .btn;
+	@extend .btn-default;
+
+	box-shadow: none;
+}

@@ -49,6 +49,13 @@
 				display: none;
 			}
 		}
+
+		&.filter-color .filter_option.filter_option-color-white {
+			label {
+				opacity: 1 !important;
+				border: 1px solid transparent !important;
+			}
+		}
 	}
 
 	.radio input[type="radio"], 

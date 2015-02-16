@@ -19,45 +19,6 @@
 	margin-top: 30px;
 	user-select:none;
 
-	@media (max-width: $grid-float-breakpoint-max) {
-		margin-top: 0px;
-		& + .filter {
-			margin-top: 30px;
-		}
-
-		.form-control-default {
-			background: #ffffff;
-		}
-
-		.filter_option {
-			display: inline-block;
-			margin-right: 2px;
-
-			label {
-				background: #ffffff;
-				color: $brand-primary;
-				border-radius: 2px;
-				padding: 5px 10px;
-			}
-
-			input:checked + label {
-				background: $brand-primary;
-				color: #ffffff;
-			}
-			
-			input {
-				display: none;
-			}
-		}
-
-		&.filter-color .filter_option.filter_option-color-white {
-			label {
-				opacity: 1 !important;
-				border: 1px solid transparent !important;
-			}
-		}
-	}
-
 	.radio input[type="radio"], 
 	.radio-inline input[type="radio"], 
 	.checkbox input[type="checkbox"], 
@@ -124,6 +85,57 @@
 		
 		input {
 			display: none;
+		}
+	}
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		margin-top: 0px;
+		& + .filter {
+			margin-top: 30px;
+		}
+
+		.form-control-default {
+			background: #ffffff;
+		}
+
+		.filter_option {
+			display: inline-block;
+			margin-right: 2px;
+
+			label {
+				background: #ffffff;
+				color: $brand-primary;
+				border-radius: 2px;
+				padding: 5px 10px;
+			}
+
+			input:checked + label {
+				background: $brand-primary;
+				color: #ffffff;
+			}
+			
+			input {
+				display: none;
+			}
+		}
+
+		&.filter-color .filter_option {
+			label {
+				width: 32px;
+				height: 32px;
+			}
+
+			input:checked + label::after
+			{
+				line-height: 32px;
+			}
+
+			&.filter_option-color-white {
+				label {
+					opacity: 1;
+					border: 1px solid transparent;
+				}
+			}
 		}
 	}
 }

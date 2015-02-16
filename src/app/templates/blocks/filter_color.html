@@ -2,13 +2,13 @@
 
 {% block options %}
 	{% for option in filter.options %}
-		{% set borderColor = option.colorCode %}
-		{% if borderColor == "#ffffff" %}
-			{% set borderColor = "rgba(0, 0, 0, 0.2)" %}
+		{% set filterClass = "filter_option-color" %}
+		{% if option.colorCode == "#ffffff" %}
+			{% set filterClass = "filter_option-color filter_option-color-white" %}
 		{% endif %}
-		<div class="checkbox filter_option">
+		<div class="checkbox filter_option {{ filterClass }}">
 			<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" id="{{ filter.name|lower }}_{{option.id}}" />
-			<label for="{{ filter.name|lower }}_{{option.id}}" style="background-color: {{ option.colorCode }}; border-color: {{ borderColor }}">
+			<label for="{{ filter.name|lower }}_{{option.id}}" style="background-color: {{ option.colorCode }};">
 				{{option.name}}
 			</label>
 		</div>

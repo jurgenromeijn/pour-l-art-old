@@ -101,7 +101,18 @@
 			text-indent: 0;
 			text-align: center;
 			color: #ffffff;
-			opacity: 0.8;
+			opacity: 0.9;
+		}
+
+
+		&.filter_option-color-white {
+			label {
+				border: 1px solid rgba(0, 0, 0, 0.2);
+			}
+
+			input:checked + label::after {
+				color: $gray-light;
+			}
 		}
 		
 		input {

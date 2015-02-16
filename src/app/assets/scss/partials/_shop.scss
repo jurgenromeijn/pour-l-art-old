@@ -85,6 +85,23 @@
 			background: $brand-primary;
 			color: #ffffff;
 			opacity: 1;
+			position: relative;
+		}
+
+		input:checked + label::after {
+			@extend .fa;
+
+			content: $fa-var-check;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			line-height: 22px;
+			text-indent: 0;
+			text-align: center;
+			color: #ffffff;
+			opacity: 0.8;
 		}
 		
 		input {

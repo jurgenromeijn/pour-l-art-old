@@ -1,13 +1,15 @@
 <fieldset class="filter {% if filter.type %}filter-{{ filter.type }}{% endif %}">
 	<legend class="filter_header">{{ filter.name }}</legend>
 	{% block options %}
-		{% for option in filter.options %}
-			<div class="checkbox filter_option">
-				<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" id="{{ filter.name|lower }}_{{option.id}}" />
-				<label for="{{ filter.name|lower }}_{{option.id}}">
-					{{option.name}}
-				</label>
-			</div>
-		{% endfor %}
+		<ul class="list-unstyled">
+			{% for option in filter.options %}
+				<li class="checkbox filter_option">
+					<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" id="{{ filter.name|lower }}_{{option.id}}" />
+					<label for="{{ filter.name|lower }}_{{option.id}}">
+						{{option.name}}
+					</label>
+				</li>
+			{% endfor %}
+		</ul>
 	{% endblock %}
 </fieldset>

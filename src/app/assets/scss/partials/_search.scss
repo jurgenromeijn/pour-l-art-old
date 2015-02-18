@@ -1,0 +1,20 @@
+.search {
+
+}
+
+.form-group-search {
+	margin-bottom: 0;
+
+	.search_field {
+		background: #ffffff;
+		border: none;
+		border-radius: 2px;
+		box-shadow: none;
+		color: $brand-primary;
+
+		&::placeholder {
+			color: $gray-light;
+			text-align: center;
+		}
+	}
+}

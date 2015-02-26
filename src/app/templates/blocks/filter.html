@@ -3,7 +3,7 @@
 	{% block options %}
 		<ul class="list-unstyled">
 			{% for option in filter.options %}
-				<li class="checkbox filter_option">
+				<li class="checkbox checkbox-collapse filter_option">
 					<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" id="{{ filter.name|lower }}_{{option.id}}" />
 					<label for="{{ filter.name|lower }}_{{option.id}}">
 						{{option.name}}

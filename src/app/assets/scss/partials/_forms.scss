@@ -23,7 +23,9 @@
 
 			color: $gray-lighter;
 			content: $fa-var-square;
-			margin-right: 10px;
+			margin-right: 5px;
+			position: relative;
+			bottom: 1px;
 		}
 	}
 
@@ -51,6 +53,10 @@
 			input:checked + label {
 				background: $brand-primary;
 				color: #ffffff;
+
+				&::before {
+					color: #ffffff;
+				}
 			}
 		}
 	}

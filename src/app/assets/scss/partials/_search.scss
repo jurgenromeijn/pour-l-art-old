@@ -8,7 +8,6 @@
 	.search_field {
 		background: #ffffff;
 		border: none;
-		border-radius: 2px;
 		box-shadow: none;
 		color: $brand-primary;
 
@@ -16,5 +15,12 @@
 			color: $gray-light;
 			text-align: center;
 		}
+	}
+
+	.search_button {
+		background: #ffffff;
+		border: none;
+		box-shadow: none;
+		color: $brand-primary;
 	}
 }

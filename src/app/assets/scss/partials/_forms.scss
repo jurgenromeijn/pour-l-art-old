@@ -1,0 +1,65 @@
+.form-control-default {
+	@extend .btn;
+	@extend .btn-default;
+
+	box-shadow: none;
+}
+
+.radio input[type="radio"], 
+.radio-inline input[type="radio"], 
+.checkbox input[type="checkbox"], 
+.checkbox-inline input[type="checkbox"] {
+	margin-left: 0;
+	cursor: pointer;
+}
+
+
+.checkbox {
+	label {
+		padding-left: 0px;
+
+		&::before {
+			@extend .fa;
+
+			color: $gray-lighter;
+			content: $fa-var-square;
+			display: inline-block;
+			width: 12px;
+			margin-right: 5px;
+			position: relative;
+			bottom: 1px;
+		}
+	}
+
+	input:checked + label::before {
+		content: $fa-var-check-square;
+		color: $brand-primary;
+	}
+
+	input {
+		display: none;
+	}
+	
+	@media (max-width: $grid-float-breakpoint-max) {
+		&.checkbox-collapse {
+			display: inline-block;
+			margin-right: 2px;
+
+			label {
+				background: #ffffff;
+				color: $brand-primary;
+				border-radius: 2px;
+				padding: 5px 10px;
+			}
+
+			input:checked + label {
+				background: $brand-primary;
+				color: #ffffff;
+
+				&::before {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}

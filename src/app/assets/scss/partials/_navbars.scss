@@ -4,11 +4,17 @@
 	height: 60px;
 }
 
+.navbar-header {
+	text-align: center;
+}
+
 .navbar-default .navbar-brand {
+	display: inline-block;
 	font-family: $headings-font-family;
 	font-size: $font-size-large * 2;
 	line-height: $font-size-large * 2;
 	height: 60px;
+	float: none;
 	padding: ((60px - ($font-size-large * 2)) / 2) 15px;
 }
 

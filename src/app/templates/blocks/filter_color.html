@@ -1,0 +1,18 @@
+{% extends "filter.html" %}
+
+{% block options %}
+	<ul class="list-unstyled">
+		{% for option in filter.options %}
+			{% set filterClass = "filter_option-color" %}
+			{% if option.colorCode == "#ffffff" %}
+				{% set filterClass = "filter_option-color filter_option-color-white" %}
+			{% endif %}
+			<li class="checkbox filter_option {{ filterClass }}">
+				<input type="checkbox" name="{{ filter.name|lower }}" value="{{option.id}}" id="{{ filter.name|lower }}_{{option.id}}" />
+				<label for="{{ filter.name|lower }}_{{option.id}}" style="background-color: {{ option.colorCode }};">
+					{{option.name}}
+				</label>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

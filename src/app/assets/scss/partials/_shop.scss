@@ -1,6 +1,148 @@
-.filter, .shop {
+.filters {
+	@media (max-width: $grid-float-breakpoint-max) {
+		.filters_body {
+			background: $gray-lighter;
+			border-radius: 2px;
+			padding: 15px 15px 0;
+			margin-top: 30px;
+		}
+	}
 
+	@media (min-width: $grid-float-breakpoint) {
+		display: block !important;
+		visibility: visible !important;
+		height: auto !important;
+	}
+}
+
+.filter {
 	margin-top: 30px;
+	user-select:none;
+
+	&.filter-price {
+		label {
+			font-weight: lighter;
+		}
+	}
+
+	&.filter-color .filter_option {
+		display: inline-block;
+		margin-right: 3px;
+		line-height: 1;
+
+		label {
+			border-radius: 2px;
+			padding: 5px;
+			text-indent: -2000px;
+			overflow: hidden;
+			width: 22px;
+			height: 22px;
+			border: 1px solid transparent;
+			opacity: 0.5;
+		}
+
+		input:checked + label {
+			background: $brand-primary;
+			color: #ffffff;
+			opacity: 1;
+			position: relative;
+		}
+
+		input:checked + label::after {
+			@extend .fa;
+
+			content: $fa-var-check;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			line-height: 22px;
+			text-indent: 0;
+			text-align: center;
+			color: #ffffff;
+			opacity: 0.9;
+		}
+
+
+		&.filter_option-color-white {
+			label {
+				border: 1px solid rgba(0, 0, 0, 0.2);
+			}
+
+			input:checked + label::after {
+				color: $gray-light;
+			}
+		}
+		
+		input {
+			display: none;
+		}
+	}
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		margin-top: 0px;
+		& + .filter {
+			margin-top: 30px;
+		}
+
+		.form-control-default {
+			background: #ffffff;
+		}
+
+		&.filter-color .filter_option {
+			label {
+				width: 32px;
+				height: 32px;
+			}
+
+			input:checked + label::after
+			{
+				line-height: 32px;
+			}
+
+			&.filter_option-color-white {
+				label {
+					opacity: 1;
+					border: 1px solid transparent;
+				}
+			}
+		}
+	}
+}
+
+.shop {
+	margin-top: 60px;
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		margin-top: 0px;
+	}
+}
+
+.sorting {
+	position: relative;
+	top: 30px;
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		margin-top: 30px;
+		position: static;
+		
+		.text-right > span {
+			display: block;
+			height: 22px;
+			margin-bottom: 11px;
+		}
+
+		.btn-primary {
+			margin-top: 33px;
+		}
+	}
+
+	.text-right select {
+		margin-left: 10px;
+		width: auto;
+		display: inline-block;
+	}
 }
 
 .filter_header {

@@ -14,6 +14,7 @@
 	font-size: 22px;
 	line-height: 1;
 	display: inline-block;
+	position: relative;
 
 	@media (min-width: $grid-float-breakpoint) {
 		height: 60px;
@@ -35,5 +36,21 @@
 }
 
 .cart_badge {
-	display: none;
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-weight: normal;
+	background: $brand-primary;
+	color: #ffffff;
+	width: 18px;
+	height: 18px;
+	padding: 0;
+	line-height: 18px;
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		background: $gray-dark;
+		right: 5px;
+		top: 5px;
+	}
 }

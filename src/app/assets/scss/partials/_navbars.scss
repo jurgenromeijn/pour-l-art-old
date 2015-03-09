@@ -5,10 +5,13 @@
 }
 
 .navbar-default .navbar-brand {
+	display: block;
 	font-family: $headings-font-family;
 	font-size: $font-size-large * 2;
 	line-height: $font-size-large * 2;
 	height: 60px;
+	float: none;
+	text-align: center;
 	padding: ((60px - ($font-size-large * 2)) / 2) 15px;
 }
 

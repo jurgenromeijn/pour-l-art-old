@@ -1,55 +1,32 @@
-.cart-navbar {
-	float: right;
-
-	&::after {
-		content: " ";
-		display: table;
-		clear: both;
-	}
-}
-
 .cart_button {
-	color: #ffffff !important;
-	font-size: 22px;
-	line-height: 1;
-	display: inline-block;
-	position: relative;
-
-	@media (min-width: $grid-float-breakpoint) {
-		height: 60px;
-		padding: 19px 20px;
-		background: $gray-dark;
-		margin-left: 14px;
-	}
-
 	@media (max-width: $grid-float-breakpoint-max) {
-		background: $brand-primary;
+		display: inline-block !important;
+		background: $brand-primary !important;
 		border-radius: 2px;
-		margin-left: 15px;
 		padding: 11px;
 		@include navbar-vertical-align(34px);
 		height: 44px;
 		width: 54px;
 		text-align: center;
 	}
-}
 
-.cart_badge {
-	display: inline-block;
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	font-weight: normal;
-	background: $brand-primary;
-	color: #ffffff;
-	width: 18px;
-	height: 18px;
-	padding: 0;
-	line-height: 18px;
+	.cart_badge {
+		display: inline-block;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-weight: normal;
+		background: $brand-primary;
+		color: #ffffff;
+		width: 18px;
+		height: 18px;
+		padding: 0;
+		line-height: 18px;
 
-	@media (max-width: $grid-float-breakpoint-max) {
-		background: $gray-dark;
-		right: 5px;
-		top: 5px;
+		@media (max-width: $grid-float-breakpoint-max) {
+			background: $gray-dark;
+			right: 5px;
+			top: 5px;
+		}
 	}
 }

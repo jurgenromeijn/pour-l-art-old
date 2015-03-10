@@ -58,8 +58,7 @@
 	margin: 0 -15px;
 	text-align: center;
 	& > li a {
-		padding-top: 19px;
-		padding-bottom: 19px;
+		padding: 19px 10px;
 	}
 }
 
@@ -68,5 +67,35 @@
 	box-shadow: none;
 	@media (max-width: $grid-float-breakpoint-max) {
 		background: $gray-dark;
+	}
+}
+
+.navbar_icons {
+	float: right;
+	margin-right: 15px;
+	margin-left: 30px;
+
+	&::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+	.navbar_icon {
+		color: #ffffff !important;
+		font-size: 22px;
+		line-height: 1;
+		display: inline-block;
+		position: relative;
+
+		@media (min-width: $grid-float-breakpoint) {
+			height: 60px;
+			padding: 19px 20px;
+			background: $gray-dark;
+		}
+
+		@media (max-width: $grid-float-breakpoint-max) {
+			display: none;
+		}
 	}
 }

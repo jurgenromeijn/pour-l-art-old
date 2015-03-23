@@ -2,7 +2,7 @@
 	border: 0 solid #000000;
 	transition: padding 0.5s, background 0.5s;
 	height: 60px;
-	
+
 	&.navbar-intro {
 		background: transparent;
 	}
@@ -55,8 +55,8 @@
 
 			@media (min-width: $grid-float-breakpoint) {
 				height: 60px;
-				padding: 19px 20px;
-				background: $gray-dark;
+				padding: 19px 10px;
+				//background: $gray-dark;
 			}
 
 			@media (max-width: $grid-float-breakpoint-max) {

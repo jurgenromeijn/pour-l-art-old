@@ -1,24 +1,17 @@
 .artists {
-}
-
-.artist {
-	margin-top: 50px;
-	text-align: center;
-
-	@media (max-width: $grid-float-breakpoint-max) {
-		& + .artist {
-			margin-top: 100px;
-		}
+	.artist {
+		margin-top: 45px;
+		text-align: center;
 	}
-}
 
-.artist_image {
-	border: 5px solid #ffffff;
-	border-radius: 150px;
-	width: 70%;
-	max-width: 300px;
-}
+	.artist_image {
+		border: 5px solid #ffffff;
+		border-radius: 150px;
+		width: 70%;
+		max-width: 300px;
+	}
 
-.artist_caption {
-	margin-top: 30px;
+	.artist_caption {
+		margin-top: 30px;
+	}
 }

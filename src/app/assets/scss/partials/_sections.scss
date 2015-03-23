@@ -39,10 +39,11 @@
 
 .section_header {
 	text-align: center;
-}
 
-.section_tagline {
-	color: $gray-light;
-	font-size: $font-size-large;
-	font-weight: lighter;
+	.section_tagline {
+		color: $gray-light;
+		font-size: $font-size-large;
+		font-weight: lighter;
+		margin-bottom: 0;
+	}
 }

@@ -1,35 +1,25 @@
 .article-small {
-	margin-top: 50px;
+	margin-top: 45px;
 	text-align: center;
 
-	@media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
-		margin-top: 20px;
-	}
-	
-	@media (max-width: $grid-float-breakpoint-max) {
-		& + .article-small {
-			margin-top: 100px;
-		}
-	}
-}
-
-.article_header {
-	margin-top: 30px;
-	color: #000000;
-	text-align: center;
-}
-
-.article_icon {
-	background: $brand-primary;
-	border-radius: 50%;
-	color: #ffffff;
-	display: inline-block;
-	font-size: 80px;
-	line-height: 220px;
-	height: 220px;
-	width: 220px;
-	text-align: center;
-	@media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
+	.article_header {
 		margin-top: 30px;
+		color: #000000;
+		text-align: center;
+	}
+
+	.article_icon {
+		background: $brand-primary;
+		border-radius: 50%;
+		color: #ffffff;
+		display: inline-block;
+		font-size: 80px;
+		line-height: 150px;
+		height: 150px;
+		width: 150px;
+		text-align: center;
+		@media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
+			margin-top: 30px;
+		}
 	}
 }

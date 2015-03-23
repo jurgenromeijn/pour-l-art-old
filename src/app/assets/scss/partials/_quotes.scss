@@ -1,46 +1,49 @@
 .quote {
 	border-left: none;
 	text-align: right;
+	margin: 0;
+	padding: 30px 15px 0;
 
 	@media (max-width: $grid-float-breakpoint-max) {
 		text-align: center;
 	}
+
+	.quote_content {
+		@extend h1;
+		color: #000000;
+
+		&::before {
+			content: "“";
+			color: $brand-primary;
+		}
+
+		&::after {
+			content: "”";
+			color: $brand-primary;
+		}
+	}
+
+	.quote_author {
+		font-weight: lighter;
+		font-style: normal;
+
+		&::before {
+			color: $brand-primary;
+			content: "-";
+			font-size: $font-size-h1;
+			font-family: $headings-font-family;
+			line-height: 0.25;
+			margin-right: 10px;
+			position: relative;
+			top: $font-size-base; 
+		}
+	}
 }
 
-.quote_content {
-	@extend h1;
-	color: #000000;
-}
-
-.quote_content:before {
-	content: "“";
-	color: $brand-primary;
-}
-
-.quote_content:after {
-	content: "”";
-	color: $brand-primary;
-}
-
-.quote_author {
-	font-weight: lighter;
-	font-style: normal;
-}
-
-.quote_author:before {
-	color: $brand-primary;
-	content: "-";
-	font-size: $font-size-h1;
-	font-family: $headings-font-family;
-	line-height: 0.25;
-	margin-right: 10px;
-	position: relative;
-	top: $font-size-base; 
-}
-
+// Refactor this to be one block
 .quote_image {
 	width: 100%;
-	max-width: 300px;
+	max-width: 220px;
 	border: 5px solid #ffffff;
 	border-radius: 500px;
 }

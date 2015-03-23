@@ -3,7 +3,7 @@
 		display: inline-block !important;
 		background: $brand-primary !important;
 		border-radius: 2px;
-		padding: 11px;
+		padding: 11px !important;
 		@include navbar-vertical-align(34px);
 		height: 44px;
 		width: 54px;
@@ -13,7 +13,7 @@
 	.cart_badge {
 		display: inline-block;
 		position: absolute;
-		right: 10px;
+		right: 0px;
 		top: 10px;
 		font-weight: normal;
 		background: $brand-primary;

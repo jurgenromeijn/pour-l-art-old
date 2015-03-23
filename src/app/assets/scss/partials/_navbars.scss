@@ -3,12 +3,12 @@
 	transition: padding 0.5s, background 0.5s;
 	height: 60px;
 
+	&.navbar-intro {
+		background: transparent;
+	}
+
 	.navbar-header {
 		text-align: center;
-
-		&.navbar-intro {
-			background: transparent;
-		}
 
 		.navbar-brand {
 			display: inline-block;
@@ -55,8 +55,7 @@
 
 			@media (min-width: $grid-float-breakpoint) {
 				height: 60px;
-				padding: 19px 20px;
-				background: $gray-dark;
+				padding: 19px 10px;
 			}
 
 			@media (max-width: $grid-float-breakpoint-max) {

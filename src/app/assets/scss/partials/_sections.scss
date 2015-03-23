@@ -3,7 +3,7 @@
 }
 
 .section {
-	padding: 100px 0;
+	padding: 45px 0;
 }
 
 .section-hero {
@@ -17,6 +17,10 @@
 .section-alternative {
 	@extend .section;
 	background: $gray-lighter;
+}
+
+.section-collection {
+	padding: 45px 0 30px;
 }
 
 .section_search {
@@ -35,10 +39,11 @@
 
 .section_header {
 	text-align: center;
-}
 
-.section_tagline {
-	color: $gray-light;
-	font-size: $font-size-large;
-	font-weight: lighter;
+	.section_tagline {
+		color: $gray-light;
+		font-size: $font-size-large;
+		font-weight: lighter;
+		margin-bottom: 0;
+	}
 }

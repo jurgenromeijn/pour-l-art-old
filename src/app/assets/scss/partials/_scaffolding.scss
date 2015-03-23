@@ -4,3 +4,12 @@ html,body{
     margin:0;
     padding:0;
 }
+
+h1, .quote_content, .h1, h2, .h2, h3, .filter_header, .h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+p {
+	margin-bottom: 10px;
+}

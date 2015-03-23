@@ -2,13 +2,13 @@
 	border: 0 solid #000000;
 	transition: padding 0.5s, background 0.5s;
 	height: 60px;
+	
+	&.navbar-intro {
+		background: transparent;
+	}
 
 	.navbar-header {
 		text-align: center;
-
-		&.navbar-intro {
-			background: transparent;
-		}
 
 		.navbar-brand {
 			display: inline-block;

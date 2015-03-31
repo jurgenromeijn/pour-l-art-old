@@ -1,0 +1,168 @@
+{
+	"collection": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+	"sort": [
+		"prijs",
+		"nieuw",
+		"naam",
+		"kunstenaar"
+	],
+	"filters": [
+		{
+			"filter": {
+				"name": "Type kunst",
+				"breakpoint": "md",
+				"options": [
+					{
+						"id": 0,
+						"name": "Schilderkunst"
+					},
+					{
+						"id": 1,
+						"name": "Tekenkunst"
+					},	
+					{
+						"id": 2,
+						"name": "Fotografie"
+					},
+					{
+						"id": 3,
+						"name": "Beeldende kunst"
+					}
+				]
+			}
+		},
+		{
+			"filter": {
+				"name": "Stroming",
+				"breakpoint": "md",
+				"options": [
+					{
+						"id": 0,
+						"name": "Modern"
+					},
+					{
+						"id": 1,
+						"name": "Gotisch"
+					},	
+					{
+						"id": 2,
+						"name": "Renaissance"
+					},
+					{
+						"id": 3,
+						"name": "Classicisme"
+					},
+					{
+						"id": 4,
+						"name": "Surrealisme"
+					},
+					{
+						"id": 5,
+						"name": "Impressionisme"
+					}
+				]
+			}
+		},
+		{
+			"filter": {
+				"name": "Kleur",
+				"breakpoint": "md",
+				"type": "color",
+				"options": [
+					{
+						"id": 3,
+						"colorCode": "#ffffff",
+						"name": "Wit"
+					},
+					{
+						"id": 2,
+						"colorCode": "#bdc3c7",
+						"name": "Grijs"
+					},
+					{
+						"id": 1,
+						"colorCode": "#000000",
+						"name": "Zwart"
+					},
+					{
+						"id": 0,
+						"colorCode": "#8F2626",
+						"name": "Bruin"
+					},
+					{
+						"id": 4,
+						"colorCode": "#FFCAD1",
+						"name": "Roze"
+					},
+					{
+						"id": 5,
+						"colorCode": "#9b59b6",
+						"name": "Paars"
+					},
+					{
+						"id": 6,
+						"colorCode": "#e74c3c",
+						"name": "Rood"
+					},
+					{
+						"id": 7,
+						"colorCode": "#e67e22",
+						"name": "Oranje"
+					},
+					{
+						"id": 8,
+						"colorCode": "#f1c40f",
+						"name": "Geel"
+					},
+					{
+						"id": 9,
+						"colorCode": "#1abc9c",
+						"name": "Groen"
+					},
+					{
+						"id": 10,
+						"colorCode": "#3498db",
+						"name": "Blauw"
+					}
+				]
+			}
+		},
+		{
+			"filter": {
+				"name": "Prijs",
+				"breakpoint": "md",
+				"type": "price"
+			}
+		}
+	], 
+	"intro": false,
+	"header": {
+		"active": "/shop.html",
+		"navigation": [
+			{
+				"name": "Home",
+				"url": "/"
+			},
+			{
+				"name": "Shop",
+				"url": "/shop.html"
+			},
+			{
+				"name": "Wedstrijd",
+				"url": "/wedstrijd.html"
+			},
+			{
+				"name": "Workshops &amp; lezingen",
+				"url": "/workshops.html"
+			},
+			{
+				"name": "Over",
+				"url": "/over.html"
+			},
+			{
+				"name": "Contact",
+				"url": "/contact.html"
+			}
+		]
+	}
+}

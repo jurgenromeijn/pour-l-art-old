@@ -3,7 +3,25 @@
 {% block content %}
 	{% include "sections/search.html" %}
 	
-	{% include "sections/shop/shop.html" %}
+	<section class="section section_shop">
+		<div class="container">
+			<form action="shop.html" method="get" class="row">
+				{% include "sections/shop/sorting.html" %}
+				{% include "sections/shop/filters.html" %}
+				<div class="col-sm-9 col-lg-10 shop">
+					{% block %}
+					<ul class="shop_items row list-unstyled">
+						{% for collectionItem in collection %}
+							<li class="col-sm-6 col-md-4">
+								{% include "blocks/collection_item.html" collectionItem %}
+							</li>
+						{% endfor %}
+					</ul>
+					{% include "sections/pagination.html" %}
+				</div>
+			</form>
+		</div>
+	</section>
 
 	{% include "sections/quote.html" %}
 {% endblock %}

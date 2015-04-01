@@ -1,6 +1,7 @@
 .btn {
 	padding: 10px 30px;
 	transition: color 0.25s, background 0.25s;
+	box-shadow: none !important;
 
 	&.btn-lg {
 		padding: 15px 45px;

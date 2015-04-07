@@ -127,10 +127,13 @@
 		margin-top: 30px;
 		position: static;
 		
-		.text-right > span {
+		span {
 			display: block;
 			height: 22px;
-			margin-bottom: 11px;
+		}
+
+		select, button {
+			margin-top: 10px;
 		}
 	}
 

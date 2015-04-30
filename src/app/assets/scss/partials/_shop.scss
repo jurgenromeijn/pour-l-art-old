@@ -16,7 +16,9 @@
 }
 
 .filter {
-	margin-top: 30px;
+	& + & {
+		margin-top: 10px;
+	}
 	user-select:none;
 
 	&.filter-price {
@@ -81,11 +83,6 @@
 	}
 
 	@media (max-width: $grid-float-breakpoint-max) {
-		margin-top: 0px;
-		& + .filter {
-			margin-top: 30px;
-		}
-
 		.form-control-default {
 			background: #ffffff;
 		}
@@ -112,7 +109,7 @@
 }
 
 .shop {
-	margin-top: 60px;
+	margin-top: 30px;
 
 	@media (max-width: $grid-float-breakpoint-max) {
 		margin-top: 0px;

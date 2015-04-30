@@ -1,8 +1,56 @@
-<section class="section section-collection">
+<section class="section section-first section-cart">
 	<div class="container">
 		<header class="section_header" id="collection">
-			<h2>Winkelwagen</h2>
-			<p class="section_tagline">Koop deze producten nu!</p> 
+			<h2>Uw winkelwagen</h2>
+			<p class="section_tagline">Bekijk de producten in uw winkelwagen.</p> 
 		</header>
+		<div class="cart">
+			<table class="table container">
+				<thead>
+					<tr>
+						<th class="col-xs-8">Kunstwerk</th>
+						<th class="col-xs-3">Prijs</th>
+						<th class="col-xs-1">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							{% include "../../blocks/cart/cart_item.html" %}
+						</td>
+						<td>&euro; 1.000,-</td>
+						<td><i class="fa fa-times"></i></td>
+					</tr>
+					<tr>
+						<td>
+							{% include "../../blocks/cart/cart_item.html" %}
+						</td>
+						<td>&euro; 1.000,-</td>
+						<td><i class="fa fa-times"></i></td>
+					</tr>
+					<tr>
+						<td>
+							{% include "../../blocks/cart/cart_item.html" %}
+						</td>
+						<td>&euro; 1.000,-</td>
+						<td><i class="fa fa-times"></i></td>
+					</tr>
+					<tr>
+						<td>
+							{% include "../../blocks/cart/cart_item.html" %}
+						</td>
+						<td>&euro; 1.000,-</td>
+						<td><i class="fa fa-times"></i></td>
+					</tr>
+					<tr>
+						<td>
+							{% include "../../blocks/cart/cart_item.html" %}
+						</td>
+						<td>&euro; 1.000,-</td>
+						<td><i class="fa fa-times"></i></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </section>

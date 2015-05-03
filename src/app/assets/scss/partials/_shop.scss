@@ -149,3 +149,15 @@
 	@extend h3;
 	border: none;
 }
+
+.page-count {
+    float: left;
+    
+    @media (min-width: $grid-float-breakpoint) {
+        margin-top: 8px;
+    }
+    
+    strong {
+        color:  $gray;
+    }
+}

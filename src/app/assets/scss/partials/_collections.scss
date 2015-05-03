@@ -50,12 +50,14 @@
 
 .collection-item_favorite {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 15px;
+	right: 15px;
     background-color: #fff;
     border-radius: 20px;
 	display: inline-block;
-    font-size: 15px;
+    width: $font-size-base + (10px * 2);
+    height: $font-size-base  + (10px * 2);
+    text-align: center;
 	line-height: 1;
     padding: 10px;
     opacity: 0.8;

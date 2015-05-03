@@ -5,8 +5,13 @@
 }
 
 .collection-item {
+	background-color: $gray-lighter;    
+    border-radius: 2px;
 	margin-top: 30px;
+    overflow: hidden;
+    position: relative;
 }
+
 .collection-item_name {
 	line-height: 1.2;
 }
@@ -15,6 +20,7 @@
 	color: #000000;
 	display: block;
 	text-decoration: none !important;
+	position: relative;
 }
 
 .collection-item_link:hover {
@@ -26,9 +32,7 @@
 }
 
 .collection-item_caption {
-	text-align: center;
 	padding: 15px;
-	position: relative;
 }
 
 .collection-item_artist {
@@ -41,5 +45,28 @@
 
 .collection-item_price {
 	font-weight: lighter;
-	margin-bottom: 11px;
+    margin-bottom: 0;
+}
+
+.collection-item_favorite {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+	display: inline-block;
+    font-size: 15px;
+	line-height: 1;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+.collection-item_favorite:hover {
+    opacity: 1;
+}
+
+.collection-item_cart {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
 }

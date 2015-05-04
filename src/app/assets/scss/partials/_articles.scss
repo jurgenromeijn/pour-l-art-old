@@ -1,6 +1,13 @@
 .article-small {
-	margin-top: 45px;
+	margin-top: 30px;
 	text-align: center;
+    
+    & + & .article_icon {
+        @media (max-width: $grid-float-breakpoint-max) {
+            border-top: 4px solid #fff;
+            padding-top: 30px;
+        }
+    }
 
 	.article_header {
 		margin-top: 30px;
@@ -8,16 +15,16 @@
 		text-align: center;
 	}
 
-	.article_icon {
-		background: $brand-primary;
-		border-radius: 50%;
-		color: #ffffff;
-		display: inline-block;
-		font-size: 80px;
-		line-height: 150px;
-		height: 150px;
-		width: 150px;
-		text-align: center;
+	.article_icon .fa {
+        background: $brand-primary;
+        border-radius: 50%;
+        color: #ffffff;
+        display: inline-block;
+        font-size: 80px;
+        line-height: 150px;
+        height: 150px;
+        width: 150px;
+        text-align: center;
 		@media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
 			margin-top: 50px;
 		}

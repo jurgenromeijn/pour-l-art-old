@@ -5,6 +5,8 @@
         
         @media (max-width: $grid-float-breakpoint-max) {
             background: $gray-lighter;
+            border-radius: 2px;
+            overflow: hidden;
             padding: 15px;
         }
 	}

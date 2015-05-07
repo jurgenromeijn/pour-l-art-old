@@ -2,13 +2,6 @@
 	margin-top: 30px;
 	text-align: center;
     
-    & + & .article_icon {
-        @media (max-width: $grid-float-breakpoint-max) {
-            border-top: 4px solid #fff;
-            padding-top: 30px;
-        }
-    }
-
 	.article_header {
 		margin-top: 30px;
 		color: #000000;
@@ -33,4 +26,9 @@
 	.article_content {
 		margin-bottom: 30px;
 	}
+    
+    @media (max-width: $grid-float-breakpoint-max) {
+        padding: 15px;
+        background: #fff;
+    }
 }

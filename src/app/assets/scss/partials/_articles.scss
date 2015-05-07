@@ -5,7 +5,7 @@
 	.article_header {
 		margin-top: 30px;
 		color: #000000;
-		text-align: center;
+		text-align: left;
 	}
 
 	.article_icon .fa {
@@ -18,19 +18,28 @@
         height: 150px;
         width: 150px;
         text-align: center;
-		@media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
-			margin-top: 50px;
-		}
 	}
 
 	.article_content {
 		margin-bottom: 30px;
+        text-align: left;
 	}
+        
+    @media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
+        .article_icon .fa {
+            margin-top: 50px;
+        }
+    }
     
     @media (max-width: $grid-float-breakpoint-max) {
         background: #fff;
         border-radius: 2px;
         overflow: hidden;
         padding: 15px;
+        
+        .article_icon {
+            background: $brand-primary;
+            margin: -15px;
+        }
     }
 }

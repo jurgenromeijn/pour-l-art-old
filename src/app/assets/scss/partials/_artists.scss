@@ -2,20 +2,18 @@
 	.artist {
 		margin-top: 30px;
 		text-align: center;
-        
-        @media (max-width: $grid-float-breakpoint-max) {
-            background: $gray-lighter;
-            border-radius: 2px;
-            overflow: hidden;
-            padding: 15px;
-        }
 	}
     
     .artist_image {
-        border: 5px solid #ffffff;
+        border: 5px solid $gray-lighter;
         border-radius: 150px;
         width: 70%;
         max-width: 300px;
+    }
+    
+    .artist_name {
+        color: #000;
+        text-align: left;
     }
     
 	.artist_caption {
@@ -24,5 +22,20 @@
 
 	.artist_description {
 		margin-bottom: 30px;
+        text-align: left;
 	}
+
+    @media (max-width: $grid-float-breakpoint-max) {
+        .artist {
+            background: $gray-lighter;
+            border-radius: 2px;
+            overflow: hidden;
+            padding: 15px;
+        }
+        
+        .artist_image {
+            border: 5px solid #fff;
+            margin-top: 15px;
+        }
+    }
 }

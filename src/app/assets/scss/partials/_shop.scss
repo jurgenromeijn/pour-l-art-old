@@ -1,10 +1,13 @@
 .filters {
+    .filters_body {
+        margin-top: 30px;
+    }
+
 	@media (max-width: $grid-float-breakpoint-max) {
 		.filters_body {
 			background: $gray-lighter;
 			border-radius: 2px;
 			padding: 15px 15px 0;
-			margin-top: 30px;
 		}
 	}
 
@@ -16,8 +19,11 @@
 }
 
 .filter {
-	margin-top: 30px;
 	user-select:none;
+    
+	& + & {
+		margin-top: 10px;
+	}
 
 	&.filter-price {
 		label {
@@ -78,14 +84,15 @@
 		input {
 			display: none;
 		}
+        
 	}
+    
+    .filter_header {
+        @extend h3;
+        border: none;
+    }
 
 	@media (max-width: $grid-float-breakpoint-max) {
-		margin-top: 0px;
-		& + .filter {
-			margin-top: 30px;
-		}
-
 		.form-control-default {
 			background: #ffffff;
 		}
@@ -111,17 +118,14 @@
 	}
 }
 
-.shop {
-	margin-top: 60px;
-
-	@media (max-width: $grid-float-breakpoint-max) {
-		margin-top: 0px;
-	}
+.shop {    
+    .shop_items {
+        margin-bottom: 0;
+    }
 }
 
 .sorting {
-	position: relative;
-	top: 30px;
+	margin-top: 30px;
 
 	@media (max-width: $grid-float-breakpoint-max) {
 		margin-top: 30px;
@@ -144,7 +148,14 @@
 	}
 }
 
-.filter_header {
-	@extend h3;
-	border: none;
+.page-count {
+    float: left;
+    
+    @media (min-width: $grid-float-breakpoint) {
+        margin-top: 8px;
+    }
+    
+    strong {
+        color:  $gray;
+    }
 }

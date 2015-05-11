@@ -12,7 +12,8 @@
 		color: $brand-primary;
 
 		&::placeholder {
-			color: $gray-light;
+            padding-left: 37px;
+			color: $gray;
 			text-align: center;
 		}
 	}

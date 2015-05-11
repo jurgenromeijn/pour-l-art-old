@@ -11,6 +11,7 @@
 	.quote_content {
 		@extend h1;
 		color: #000000;
+        font-size: 60px;
 
 		&::before {
 			content: "“";

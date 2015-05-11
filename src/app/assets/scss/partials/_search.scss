@@ -12,6 +12,7 @@
 		color: $brand-primary;
 
 		&::placeholder {
+            padding-left: 37px;
 			color: $gray;
 			text-align: center;
 		}

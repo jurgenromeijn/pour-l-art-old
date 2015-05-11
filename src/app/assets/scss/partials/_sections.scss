@@ -49,8 +49,11 @@
 
 	.section_tagline {
 		color: $gray;
-		font-size: $font-size-large;
 		font-weight: lighter;
 		margin-bottom: 0;
+        
+        @media (min-width: $grid-float-breakpoint) {
+		    font-size: $font-size-large;
+        }
 	}
 }

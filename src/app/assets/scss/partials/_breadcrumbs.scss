@@ -1,7 +1,15 @@
 .breadcrumb {
+    background-color: #fff;
+    border-bottom: 4px solid $gray-lighter;
+    border-radius: 0;
     margin-bottom: 0px;
+    padding: 0 0 15px 0;
     
     & > .active {
         color: $gray;
+    }
+    
+    > li + li:before {
+        color: $gray-light;
     }
 }

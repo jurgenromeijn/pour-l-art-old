@@ -5,7 +5,7 @@
 			<p class="section_tagline">Bekijk de producten in uw winkelwagen.</p> 
 		</header>
 		<div class="cart">
-			<table class="table container">
+			<table class="table container cart-overview">
 				<thead>
 					<tr>
 						<th class="col-xs-8">Kunstwerk</th>
@@ -19,37 +19,43 @@
 							{% include "../../blocks/cart/cart_item.html" %}
 						</td>
 						<td>&euro; 1.000,-</td>
-						<td><i class="fa fa-times"></i></td>
+						<td><a href="#" class="cart_delete"><i class="fa fa-times"></a></i></td>
 					</tr>
 					<tr>
 						<td>
 							{% include "../../blocks/cart/cart_item.html" %}
 						</td>
 						<td>&euro; 1.000,-</td>
-						<td><i class="fa fa-times"></i></td>
+						<td><a href="#" class="cart_delete"><i class="fa fa-times"></a></i></td>
 					</tr>
 					<tr>
 						<td>
 							{% include "../../blocks/cart/cart_item.html" %}
 						</td>
 						<td>&euro; 1.000,-</td>
-						<td><i class="fa fa-times"></i></td>
+						<td><a href="#" class="cart_delete"><i class="fa fa-times"></a></i></td>
 					</tr>
 					<tr>
 						<td>
 							{% include "../../blocks/cart/cart_item.html" %}
 						</td>
 						<td>&euro; 1.000,-</td>
-						<td><i class="fa fa-times"></i></td>
+						<td><a href="#" class="cart_delete"><i class="fa fa-times"></a></i></td>
 					</tr>
 					<tr>
 						<td>
 							{% include "../../blocks/cart/cart_item.html" %}
 						</td>
 						<td>&euro; 1.000,-</td>
-						<td><i class="fa fa-times"></i></td>
+						<td><a href="#" class="cart_delete"><i class="fa fa-times"></a></i></td>
 					</tr>
 				</tbody>
+				<tfoot>
+				    <tr>
+				        <td class="text-right cart_total_text">Totaal:</td>
+				        <td colspan="2" class="cart_total_price">&euro; 5.000,-</td>
+				    </tr>
+				</tfoot>
 			</table>
 		</div>
 	</div>

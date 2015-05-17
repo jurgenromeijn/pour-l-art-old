@@ -6,58 +6,23 @@
 		</header>
             {% include "../../blocks/cart/cart_buttons.html" %}
 		<div class="cart">
-			<table class="table container cart-overview">
-				<thead>
-					<tr>
-						<th class="col-xs-8">Kunstwerk</th>
-						<th class="col-xs-3">Prijs</th>
-						<th class="col-xs-1">&nbsp;</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							{% include "../../blocks/cart/cart_item.html" %}
-						</td>
-						<td>&euro; 1.000,-</td>
-						<td><a href="#" class="cart_delete"><i class="fa fa-times"></a></i></td>
-					</tr>
-					<tr>
-						<td>
-							{% include "../../blocks/cart/cart_item.html" %}
-						</td>
-						<td>&euro; 1.000,-</td>
-						<td><a href="#" class="cart_delete"><i class="fa fa-times"></a></i></td>
-					</tr>
-					<tr>
-						<td>
-							{% include "../../blocks/cart/cart_item.html" %}
-						</td>
-						<td>&euro; 1.000,-</td>
-						<td><a href="#" class="cart_delete"><i class="fa fa-times"></a></i></td>
-					</tr>
-					<tr>
-						<td>
-							{% include "../../blocks/cart/cart_item.html" %}
-						</td>
-						<td>&euro; 1.000,-</td>
-						<td><a href="#" class="cart_delete"><i class="fa fa-times"></a></i></td>
-					</tr>
-					<tr>
-						<td>
-							{% include "../../blocks/cart/cart_item.html" %}
-						</td>
-						<td>&euro; 1.000,-</td>
-						<td><a href="#" class="cart_delete"><i class="fa fa-times"></a></i></td>
-					</tr>
-				</tbody>
-				<tfoot>
-				    <tr>
-				        <td class="text-right cart_total_text">Totaal:</td>
-				        <td colspan="2" class="cart_total_price">&euro; 5.000,-</td>
-				    </tr>
-				</tfoot>
-			</table>
+            <hr class="hidden-xs" />
+            <div class="cart_header row hidden-xs">
+                <span class="col-sm-5 col-sm-push-2 cart_header_item">Kunstwerk</span>
+                <span class="col-sm-2 cart_header_item">Soort</span>
+                <span class="col-sm-1 cart_header_item">Aantal</span>
+                <span class="col-sm-2 cart_header_item">Verzendkosten</span>
+                <span class="col-sm-2 cart_header_item">Prijs</span>
+            </div>
+            <hr />
+            {% include "../../blocks/cart/cart_item.html" %}
+            <hr />
+            {% include "../../blocks/cart/cart_item.html" %}
+            <hr />
+            {% include "../../blocks/cart/cart_item.html" %}
+            <hr />
+            {% include "../../blocks/cart/cart_item.html" %}
+            <hr />
             {% include "../../blocks/cart/cart_buttons.html" %}
 		</div>
 	</div>

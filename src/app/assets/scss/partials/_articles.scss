@@ -31,7 +31,6 @@
         }
     }
     
-    @media (max-width: $grid-float-breakpoint-max) {
         background: #fff;
         border-radius: 2px;
         overflow: hidden;
@@ -41,5 +40,4 @@
             background: $brand-primary;
             margin: -15px;
         }
-    }
 }

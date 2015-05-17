@@ -25,7 +25,6 @@
         text-align: left;
 	}
 
-    @media (max-width: $grid-float-breakpoint-max) {
         .artist {
             background: $gray-lighter;
             border-radius: 2px;
@@ -37,5 +36,4 @@
             border: 5px solid #fff;
             margin-top: 15px;
         }
-    }
 }

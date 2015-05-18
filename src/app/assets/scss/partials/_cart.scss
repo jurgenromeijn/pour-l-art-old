@@ -33,19 +33,35 @@
 
 .cart {
     margin-top: 30px;
-}
 
-.cart_header {
-    margin: 10px -15px;
-    font-weight: bold;
-}
+    .cart_header {
+        color: $gray;
+        font-weight: lighter;
+        margin: 10px -15px;
+    }
 
-.cart_row {
-    margin: 10px -15px;
-}
+    .cart_row {
+        margin: 10px -15px;
+        position: relative;
 
-.cart_artist {
-    margin-bottom: 0;
+        .cart_delete {
+            color: $gray;
+        }
+        
+        .cart_artist {
+            margin-bottom: 0;
+        }
+        
+		@media (max-width: $grid-float-breakpoint-max) {
+            .cart_details {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 50%;
+                padding-left: 0;
+            }
+        }
+    }
 }
 
 .cart_buttons {

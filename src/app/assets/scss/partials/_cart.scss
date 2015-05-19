@@ -34,18 +34,22 @@
 .cart {
     margin-top: 30px;
 
-    .cart_header {
-        color: $gray;
-        font-weight: lighter;
-        margin: 10px -15px;
-    }
-
     .cart_row {
         margin: 10px -15px;
         position: relative;
 
         .cart_delete {
             color: $gray;
+        }
+        
+        .cart_header {
+            color: $gray;
+            font-weight: lighter;
+            margin: 0 -15px;
+        }
+        
+        .cart_title {
+            margin-bottom: 0;
         }
         
         .cart_artist {
@@ -57,13 +61,47 @@
                 position: absolute;
                 right: 0;
                 bottom: 0;
-                left: 50%;
+                left: 33.33%;
                 padding-left: 0;
+            }
+            
+            .cart_header {
+                margin-bottom: 44px;
+            }
+            
+            .cart_delete {
+                position: absolute;
+                right: 15px;
+                top: 0;
+            }
+            
+            .cart_detail {
+            }
+            
+            .cart_detail_label {
+                color: $gray;
+            }
+            
+            .cart_price {
+                color: $gray;
+                font-weight: bold;
+                text-align: right;
             }
         }
     }
 }
 
-.cart_buttons {
-    margin-top: 30px;
+.cart_total {
+    background: $gray-lighter;
+    border-radius: 2px;
+    color: $gray;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    
+    .cart_total_price {
+        color: $brand-primary;
+        font-weight: normal;
+    }
 }

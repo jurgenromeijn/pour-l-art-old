@@ -6,12 +6,7 @@
 		</header>
 		<div class="cart">
             <hr class="hidden-xs" />
-            <div class="cart_header row hidden-xs">
-                <span class="col-sm-6 col-sm-push-3 col-lg-push-2 cart_header_item">Kunstwerk</span>
-                <span class="col-sm-2 cart_header_item">Formaat</span>
-                <span class="col-sm-2 cart_header_item">Soort</span>
-                <span class="col-sm-2 cart_header_item">Prijs</span>
-            </div>
+            {% include "../../blocks/cart/cart_header.html" %}
             <hr />
             {% include "../../blocks/cart/cart_item.html" %}
             <hr />
@@ -21,12 +16,7 @@
             <hr />
             {% include "../../blocks/cart/cart_item.html" %}
             <hr />
-            <div class="cart_total text-center">                
-                <div class="row">
-                    <span class="col-sm-10 cart_total_label text-right">Totaal:</span>
-                    <span class="col-sm-2 cart_total_price text-left">&euro; 5.000.000,-</span>
-                </div>
-            </div>
+            {% include "../../blocks/cart/cart_total.html" %}
             {% include "../../blocks/cart/cart_buttons.html" %}
 		</div>
 	</div>

@@ -33,6 +33,12 @@
 
 .cart {
     margin-top: 30px;
+    
+    .cart_header {
+        color: $gray;
+        font-weight: lighter;
+        margin: 0 -15px;
+    }
 
     .cart_row {
         margin: 10px -15px;
@@ -41,13 +47,7 @@
         .cart_delete {
             color: $gray;
         }
-        
-        .cart_header {
-            color: $gray;
-            font-weight: lighter;
-            margin: 0 -15px;
-        }
-        
+                
         .cart_title {
             margin-bottom: 0;
         }

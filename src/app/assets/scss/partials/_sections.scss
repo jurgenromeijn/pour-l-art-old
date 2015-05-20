@@ -17,6 +17,15 @@
 .section-alternative {
 	@extend .section;
 	background: $gray-lighter;
+    @media (max-width: $grid-float-breakpoint-max) {
+        background: none;
+	    padding: 0;
+    }
+}
+
+.section-quote {
+	@extend .section;
+	background: $gray-lighter;
 }
 
 .section-collection {

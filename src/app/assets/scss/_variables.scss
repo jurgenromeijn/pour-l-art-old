@@ -153,8 +153,8 @@ $table-border-color:            #ddd !default;
 $btn-font-weight:                lighter !default;
 
 $btn-default-color:              $brand-primary !default;
-$btn-default-bg:                 $gray-lighter !default;
-$btn-default-border:             transparent !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             $brand-primary !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;

@@ -18,9 +18,8 @@
 
 	&.btn-responsive {
 		@media (max-width: $grid-float-breakpoint-max) {
-			font-size: $font-size-large;
-			width: 80%;
-			max-width: 400px;
+            font-size: $font-size-large;
+			width: 100%;
 		}
 	}
 }

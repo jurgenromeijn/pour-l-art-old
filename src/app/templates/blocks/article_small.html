@@ -1,4 +1,4 @@
-<article class="col-sm-12 col-md-4">
+<article class="col-md-4 col-md-height col-full-height col-top">
     <div class="article-small card-responsive">
         <div class="row">
             <div class="col-sm-4 col-md-12">
@@ -11,8 +11,13 @@
                     <h3 class="article_header">{{ article.header }}</h3>
                 </header>
                 <p class="article_content">{{ article.content }}</p>
-                <a href="{{ article.link }}" class="btn btn-responsive btn-primary">Meer info</a>
+                <div class="article_button_wrapper visible-xs visible-sm">
+                    <a href="{{ article.link }}" class="btn btn-responsive btn-primary">Meer info</a>
+                </div>
             </div>								
-        </div>        
+        </div>
+        <div class="article_button_wrapper visible-md visible-lg">
+            <a href="{{ article.link }}" class="btn btn-responsive btn-primary">Meer info</a>
+        </div>
     </div>
 </article>

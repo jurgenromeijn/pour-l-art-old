@@ -24,6 +24,17 @@
 		margin-bottom: 30px;
         text-align: left;
 	}
+    
+    @media (min-width: $screen-md-min) {
+        padding-bottom: 44px;
+
+        .article_button_wrapper{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
         
     @media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
         .article_icon .fa {

@@ -5,9 +5,11 @@
 			<p class="section_tagline">Dit is wat we aanbieden</p>
 		</header>
 		<div class="row">
-			{% for service in services %}
-				{% include "../../blocks/article_small.html" service %}
-			{% endfor %}
+            <div class="row-same-height row-full-height">
+                {% for service in services %}
+                    {% include "../../blocks/article_small.html" service %}
+                {% endfor %}                
+            </div>
 		</div>
 	</div>
 </section>

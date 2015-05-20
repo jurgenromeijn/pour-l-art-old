@@ -1,5 +1,5 @@
 <div class="col-sm-3 col-lg-2 filters collapse" id="filters">
-	<div class="filters_body">
+	<div class="filters_body card-responsive">
 		{% for filter in filters %}
 			{% if filter.filter.type == "price" %}
 				{% include "../../blocks/filter_price.html" filter %}

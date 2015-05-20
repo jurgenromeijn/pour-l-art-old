@@ -25,15 +25,10 @@
         text-align: left;
 	}
 
-        .artist {
-            background: $gray-lighter;
-            border-radius: 2px;
-            overflow: hidden;
-            padding: 15px;
-        }
-        
+    @media (max-width: $grid-float-breakpoint-max) {
         .artist_image {
             border: 5px solid #fff;
             margin-top: 15px;
         }
+    }
 }

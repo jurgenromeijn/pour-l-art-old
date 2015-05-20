@@ -5,9 +5,7 @@
 
 	@media (max-width: $grid-float-breakpoint-max) {
 		.filters_body {
-			background: $gray-lighter;
-			border-radius: 2px;
-			padding: 15px 15px 0;
+			padding-bottom: 0;
 		}
 	}
 

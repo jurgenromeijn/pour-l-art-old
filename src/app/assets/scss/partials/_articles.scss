@@ -31,13 +31,10 @@
         }
     }
     
-        background: #fff;
-        border-radius: 2px;
-        overflow: hidden;
-        padding: 15px;
-        
+    @media (max-width: $grid-float-breakpoint-max) {
         .article_icon {
             background: $brand-primary;
             margin: -15px;
         }
+    }
 }

@@ -18,13 +18,50 @@
 	}
 
 	.navbar-toggle {
-        border-color: transparent !important;
-        background-color: transparent !important;
+        border: none;
+        background: transparent !important;
 		border-radius: 2px;
 		padding: 14px 15px;
         position: relative;
         left: -15px;
-	}
+
+        &:hover {
+            background: transparent !important;
+        }
+
+        .icon-bar {
+            width: 22px;
+            transition: all 0.2s;
+        }
+
+        .top-bar {
+            transform: rotate(45deg);
+            transform-origin: 10% 10%;
+        }
+
+        .middle-bar {
+            opacity: 0;
+        }
+
+        .bottom-bar {
+            transform: rotate(-45deg);
+            transform-origin: 10% 90%;
+        }
+        
+        &.collapsed {
+            .top-bar {
+                transform: rotate(0);
+            }
+            
+            .middle-bar {
+                opacity: 1;
+            }
+            
+            .bottom-bar {
+                transform: rotate(0);
+            }
+        }
+    }
 
 	.navbar-collapse {
 		border-top: 0 solid transparent;

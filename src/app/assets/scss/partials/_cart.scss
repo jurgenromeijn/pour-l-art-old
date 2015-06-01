@@ -70,7 +70,7 @@
                 padding-left: 0;
             }
             
-            .cart_header {
+            .cart_product {
                 margin-bottom: 44px;
             }
             
@@ -85,6 +85,7 @@
             
             .cart_detail_label {
                 color: $gray;
+                font-weight: lighter;
             }
             
             .cart_price {

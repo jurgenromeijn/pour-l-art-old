@@ -1,13 +1,15 @@
 .cart_button {
 	@media (max-width: $grid-float-breakpoint-max) {
 		display: inline-block !important;
-		background: $brand-primary !important;
+		background: none !important;
 		border-radius: 2px;
 		padding: 11px !important;
 		@include navbar-vertical-align(34px);
 		height: 44px;
 		width: 54px;
 		text-align: center;
+        position: relative;
+        right: -15px;
 	}
 
 	.cart_badge {
@@ -24,7 +26,6 @@
 		line-height: 18px;
 
 		@media (max-width: $grid-float-breakpoint-max) {
-			background: $gray-dark;
 			right: 5px;
 			top: 5px;
 		}

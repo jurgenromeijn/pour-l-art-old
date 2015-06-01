@@ -1,0 +1,15 @@
+<div class="col-sm-12 sorting form-inline">
+	<div class="text-right">
+	    <span class="page-count">Pagina <strong>1</strong> / <strong>216</strong></span>
+		<span>Sorteer op:</span>
+		<button class="btn btn-sm btn-primary visible-xs pull-left" type="button" data-toggle="collapse" data-target="#filters" aria-expanded="false" aria-controls="filters">Filters</button>
+		<select class="form-control form-control-default">
+			{% for option in sort %}
+				<option>{{ option }}</option>
+			{% endfor %}
+		</select><select class="form-control form-control-default">
+			<option>Aflopend</li>
+			<option>Oplopend</li>
+		</select>
+	</div>
+</div>

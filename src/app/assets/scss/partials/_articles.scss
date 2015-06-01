@@ -1,35 +1,51 @@
 .article-small {
-	margin-top: 50px;
-	text-align: center;
-
-	@media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
-		margin-top: 20px;
-	}
-	
-	@media (max-width: $grid-float-breakpoint-max) {
-		& + .article-small {
-			margin-top: 100px;
-		}
-	}
-}
-
-.article_header {
 	margin-top: 30px;
-	color: #000000;
 	text-align: center;
-}
-
-.article_icon {
-	background: $brand-primary;
-	border-radius: 50%;
-	color: #ffffff;
-	display: inline-block;
-	font-size: 80px;
-	line-height: 220px;
-	height: 220px;
-	width: 220px;
-	text-align: center;
-	@media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
+    
+	.article_header {
 		margin-top: 30px;
+		color: $gray;
+		text-align: left;
 	}
+
+	.article_icon .fa {
+        background: $brand-primary;
+        border-radius: 50%;
+        color: #ffffff;
+        display: inline-block;
+        font-size: 80px;
+        line-height: 150px;
+        height: 150px;
+        width: 150px;
+        text-align: center;
+	}
+
+	.article_content {
+		margin-bottom: 30px;
+        text-align: left;
+	}
+    
+    @media (min-width: $screen-md-min) {
+        padding-bottom: 44px;
+
+        .article_button_wrapper{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+        
+    @media (min-width: $grid-float-breakpoint) and (max-width: $screen-sm-max) {
+        .article_icon .fa {
+            margin-top: 50px;
+        }
+    }
+    
+    @media (max-width: $grid-float-breakpoint-max) {
+        .article_icon {
+            background: $brand-primary;
+            margin: -15px;
+        }
+    }
 }

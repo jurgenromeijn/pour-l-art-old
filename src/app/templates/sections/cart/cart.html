@@ -1,0 +1,22 @@
+<section class="section section-first section-cart">
+	<div class="container">
+		<header class="section_header" id="collection">
+			<h2>Uw winkelwagen</h2>
+			<p class="section_tagline">Bekijk de producten in uw winkelwagen.</p> 
+		</header>
+		<div class="cart">
+            {% include "../../blocks/cart/cart_buttons.html" %}
+            <hr class="hidden-xs" />
+            {% include "../../blocks/cart/cart_header.html" %}
+            <hr />
+            {% include "../../blocks/cart/cart_item.html" %}
+            <hr />
+            {% include "../../blocks/cart/cart_item.html" %}
+            <hr />
+            {% include "../../blocks/cart/cart_item.html" %}
+            <hr />
+            {% include "../../blocks/cart/cart_total.html" %}
+            {% include "../../blocks/cart/cart_buttons.html" %}
+		</div>
+	</div>
+</section>

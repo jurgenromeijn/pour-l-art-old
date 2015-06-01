@@ -2,8 +2,37 @@
 
 {% block content %}
 	{% include "sections/search.html" %}
-	
-	{% include "sections/shop/shop.html" %}
+	<section class="section section_breadcrumbs">
+	    <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="shop.html">Shop</a></li>
+                <li class="active">Tekeningen</li>
+            </ol>
+	    </div>
+	</section>
+	<section class="section section_shop">
+		<div class="container">
+            <header class="section_header" id="collection">
+                <h1>Tekeningen</h1>
+                <p class="section_tagline">Elke maand worden er voor jonge kunstenaars wedstrijden georganiseerd in verschillende kunstdisciplines. De gekozen kunstenaars van de maand worden uitgelicht op onze website. Je kunt jezelf aanmelden via een social media account.</p> 
+            </header>
+			<form action="shop.html" method="get" class="row">
+				{% include "sections/shop/sorting.html" %}
+				{% include "sections/shop/filters.html" %}
+				<div class="col-sm-9 col-lg-10 shop">
+					{% block %}
+					<ul class="shop_items row list-unstyled">
+						{% for collectionItem in collection %}
+							<li class="col-sm-6 col-lg-4">
+								{% include "blocks/collection_item.html" collectionItem %}
+							</li>
+						{% endfor %}
+					</ul>
+					{% include "sections/pagination.html" %}
+				</div>
+			</form>
+		</div>
+	</section>
 
 	{% include "sections/quote.html" %}
 {% endblock %}

@@ -3,13 +3,13 @@
 }
 
 .section {
-	padding: 100px 0;
+	padding: 30px 0;
 }
 
 .section-hero {
 	position: relative;
-    height: 100%;
-    min-height: 300px;
+    height: 50%;
+    min-height: 400px;
     width: 100%;
     overflow: hidden;
 }
@@ -17,9 +17,27 @@
 .section-alternative {
 	@extend .section;
 	background: $gray-lighter;
+    @media (max-width: $grid-float-breakpoint-max) {
+        background: none;
+	    padding: 0;
+    }
+}
+
+.section-quote {
+	@extend .section;
+	background: $gray-lighter;
+}
+
+.section-collection {
+	padding: 30px 0;
+}
+
+.section-first {
+	margin-top: 60px;
 }
 
 .section_search {
+	background: $gray-lighter;
 	margin-top: 60px;
 	padding: 30px 0;
 
@@ -28,17 +46,28 @@
 	}
 }
 
+.section_breadcrumbs {
+    padding: 30px 0 0;
+}
+
 .section_shop {
-	margin-top: -24px;
-	padding: 15px 0 45px;
+	padding: 30px 0;
 }
 
 .section_header {
-	text-align: center;
-}
+	text-align: left;
+    
+    h1, h2 {
+        margin-bottom: 0;
+    }
 
-.section_tagline {
-	color: $gray-light;
-	font-size: $font-size-large;
-	font-weight: lighter;
+	.section_tagline {
+		color: $gray;
+		font-weight: lighter;
+		margin-bottom: 0;
+        
+        @media (min-width: $grid-float-breakpoint) {
+		    font-size: $font-size-large;
+        }
+	}
 }

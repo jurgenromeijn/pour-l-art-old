@@ -1,13 +1,15 @@
-<section class="section" id="services">
+<section class="section-alternative" id="services">
 	<div class="container">
-		<header class="col-lg-12 section_header">
+		<header class="section_header">
 			<h2>Diensten</h2>
 			<p class="section_tagline">Dit is wat we aanbieden</p>
 		</header>
 		<div class="row">
-			{% for service in services %}
-				{% include "../../blocks/article_small.html" service %}
-			{% endfor %}
+            <div class="row-same-height row-full-height">
+                {% for service in services %}
+                    {% include "../../blocks/article_small.html" service %}
+                {% endfor %}                
+            </div>
 		</div>
 	</div>
 </section>

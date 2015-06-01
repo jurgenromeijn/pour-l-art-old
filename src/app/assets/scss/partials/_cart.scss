@@ -1,55 +1,111 @@
-.cart-navbar {
-	float: right;
-
-	&::after {
-		content: " ";
-		display: table;
-		clear: both;
-	}
-}
-
 .cart_button {
-	color: #ffffff !important;
-	font-size: 22px;
-	line-height: 1;
-	display: inline-block;
-	position: relative;
-
-	@media (min-width: $grid-float-breakpoint) {
-		height: 60px;
-		padding: 19px 20px;
-		background: $gray-dark;
-		margin-left: 14px;
-	}
-
 	@media (max-width: $grid-float-breakpoint-max) {
-		background: $brand-primary;
+		display: inline-block !important;
+		background: none !important;
 		border-radius: 2px;
-		margin-left: 15px;
-		padding: 11px;
+		padding: 11px !important;
 		@include navbar-vertical-align(34px);
 		height: 44px;
 		width: 54px;
 		text-align: center;
+        position: relative;
+        right: -15px;
+	}
+
+	.cart_badge {
+		display: inline-block;
+		position: absolute;
+		right: 0px;
+		top: 10px;
+		font-weight: normal;
+		background: $brand-primary;
+		color: #ffffff;
+		width: 18px;
+		height: 18px;
+		padding: 0;
+		line-height: 18px;
+
+		@media (max-width: $grid-float-breakpoint-max) {
+			right: 5px;
+			top: 5px;
+		}
 	}
 }
 
-.cart_badge {
-	display: inline-block;
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	font-weight: normal;
-	background: $brand-primary;
-	color: #ffffff;
-	width: 18px;
-	height: 18px;
-	padding: 0;
-	line-height: 18px;
+.cart {
+    margin-top: 30px;
+    
+    & .cart_buttons:first-child {
+        margin-bottom: 30px;
+    }
+    
+    .cart_header {
+        color: $gray;
+        font-weight: lighter;
+        margin: 0 -15px;
+    }
 
-	@media (max-width: $grid-float-breakpoint-max) {
-		background: $gray-dark;
-		right: 5px;
-		top: 5px;
-	}
+    .cart_row {
+        margin: 10px -15px;
+        position: relative;
+
+        .cart_delete {
+            color: $gray;
+        }
+                
+        .cart_title {
+            margin-bottom: 0;
+        }
+        
+        .cart_artist {
+            margin-bottom: 0;
+        }
+        
+		@media (max-width: $grid-float-breakpoint-max) {
+            .cart_details {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 33.33%;
+                padding-left: 0;
+            }
+            
+            .cart_product {
+                margin-bottom: 44px;
+            }
+            
+            .cart_delete {
+                position: absolute;
+                right: 15px;
+                top: 0;
+            }
+            
+            .cart_detail {
+            }
+            
+            .cart_detail_label {
+                color: $gray;
+                font-weight: lighter;
+            }
+            
+            .cart_price {
+                color: $gray;
+                font-weight: bold;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.cart_total {
+    color: $gray;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    
+    .cart_total_price {
+        color: $brand-primary;
+        font-weight: normal;
+    }
 }

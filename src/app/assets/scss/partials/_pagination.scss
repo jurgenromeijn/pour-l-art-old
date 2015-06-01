@@ -1,3 +1,7 @@
+.pagination_wrapper {
+    line-height: 0;
+}
+
 .pagination {
 	margin: 30px 0 0;
 
@@ -12,13 +16,13 @@
 	}
 
 	& > li > a:hover, .pagination > li > a:focus, & > li > span:hover, & > li > span:focus {
-		color: #16a085;
-		background-color: #ddd;
+		color: $brand-primary;
+		background-color: $gray-light;
 		border-color: transparent;
 	}
 
 	& > li > a, & > li > span {
-		background-color: #eee;
+		background-color: $gray-lighter;
 		border: 1px solid transparent;
 	}
 }

@@ -1,24 +1,34 @@
 .artists {
-}
-
-.artist {
-	margin-top: 50px;
-	text-align: center;
-
-	@media (max-width: $grid-float-breakpoint-max) {
-		& + .artist {
-			margin-top: 100px;
-		}
+	.artist {
+		margin-top: 30px;
+		text-align: center;
 	}
-}
+    
+    .artist_image {
+        border: 5px solid $gray-lighter;
+        border-radius: 150px;
+        width: 70%;
+        max-width: 300px;
+    }
+    
+    .artist_name {
+        color: $gray;
+        text-align: left;
+    }
+    
+	.artist_caption {
+		margin-top: 30px;
+	}
 
-.artist_image {
-	border: 5px solid #ffffff;
-	border-radius: 150px;
-	width: 70%;
-	max-width: 300px;
-}
+	.artist_description {
+		margin-bottom: 30px;
+        text-align: left;
+	}
 
-.artist_caption {
-	margin-top: 30px;
+    @media (max-width: $grid-float-breakpoint-max) {
+        .artist_image {
+            border: 5px solid #fff;
+            margin-top: 15px;
+        }
+    }
 }

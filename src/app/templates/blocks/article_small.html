@@ -1,14 +1,23 @@
-<article class="col-sm-12 col-md-4 article-small">
-	<div class="row">
-		<div class="col-sm-4 col-md-12">
-			<i class="fa fa-{{ article.icon }} article_icon"></i>								
-		</div>
-		<div class="col-sm-8 col-md-12">
-			<header>
-				<h3 class="article_header">{{ article.header }}</h3>
-			</header>
-			<p>{{ article.content }}</p>
-			<a href="{{ article.link }}" class="button button-margin-top">Meer info</a>
-		</div>								
-	</div>
+<article class="col-md-4 col-md-height col-full-height col-top">
+    <div class="article-small card-responsive">
+        <div class="row">
+            <div class="col-sm-4 col-md-12">
+                <div class="article_icon">
+                    <i class="fa fa-{{ article.icon }}"></i>								
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-12">
+                <header>
+                    <h3 class="article_header">{{ article.header }}</h3>
+                </header>
+                <p class="article_content">{{ article.content }}</p>
+                <div class="article_button_wrapper visible-xs visible-sm">
+                    <a href="{{ article.link }}" class="btn btn-responsive btn-primary">Meer info</a>
+                </div>
+            </div>								
+        </div>
+        <div class="article_button_wrapper visible-md visible-lg">
+            <a href="{{ article.link }}" class="btn btn-responsive btn-primary">Meer info</a>
+        </div>
+    </div>
 </article>

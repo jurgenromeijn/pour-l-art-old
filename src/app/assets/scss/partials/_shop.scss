@@ -1,10 +1,11 @@
 .filters {
+    .filters_body {
+        margin-top: 30px;
+    }
+
 	@media (max-width: $grid-float-breakpoint-max) {
 		.filters_body {
-			background: $gray-lighter;
-			border-radius: 2px;
-			padding: 15px 15px 0;
-			margin-top: 30px;
+			padding-bottom: 0;
 		}
 	}
 
@@ -16,8 +17,11 @@
 }
 
 .filter {
-	margin-top: 30px;
 	user-select:none;
+    
+	& + & {
+		margin-top: 10px;
+	}
 
 	&.filter-price {
 		label {
@@ -78,14 +82,15 @@
 		input {
 			display: none;
 		}
+        
 	}
+    
+    .filter_header {
+        @extend h3;
+        border: none;
+    }
 
 	@media (max-width: $grid-float-breakpoint-max) {
-		margin-top: 0px;
-		& + .filter {
-			margin-top: 30px;
-		}
-
 		.form-control-default {
 			background: #ffffff;
 		}
@@ -111,30 +116,26 @@
 	}
 }
 
-.shop {
-	margin-top: 60px;
-
-	@media (max-width: $grid-float-breakpoint-max) {
-		margin-top: 0px;
-	}
+.shop {    
+    .shop_items {
+        margin-bottom: 0;
+    }
 }
 
 .sorting {
-	position: relative;
-	top: 30px;
+	margin-top: 30px;
 
 	@media (max-width: $grid-float-breakpoint-max) {
 		margin-top: 30px;
 		position: static;
 		
-		.text-right > span {
+		span {
 			display: block;
 			height: 22px;
-			margin-bottom: 11px;
 		}
 
-		.btn-primary {
-			margin-top: 33px;
+		select, button {
+			margin-top: 10px;
 		}
 	}
 
@@ -145,7 +146,14 @@
 	}
 }
 
-.filter_header {
-	@extend h3;
-	border: none;
+.page-count {
+    float: left;
+    
+    @media (min-width: $grid-float-breakpoint) {
+        margin-top: 8px;
+    }
+    
+    strong {
+        color:  $gray;
+    }
 }

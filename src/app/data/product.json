@@ -28,5 +28,15 @@
 				"url": "/contact.html"
 			}
 		]
-	}
+	},
+    "product": {
+        "name": "Waterlelies",
+        "artist": "Monet",
+        "artust_fullname": "Claude Moet",
+        "price": 1000000.00,
+        "specs": {
+            "size": "",
+            "weight": ""
+        }
+    }
 }

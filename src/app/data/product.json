@@ -1,0 +1,32 @@
+{
+	"intro": false,
+	"header": {
+		"active": "/shop.html",
+		"navigation": [
+			{
+				"name": "Home",
+				"url": "/"
+			},
+			{
+				"name": "Shop",
+				"url": "/shop.html"
+			},
+			{
+				"name": "Wedstrijd",
+				"url": "/wedstrijd.html"
+			},
+			{
+				"name": "Workshops &amp; lezingen",
+				"url": "/workshops.html"
+			},
+			{
+				"name": "Over",
+				"url": "/over.html"
+			},
+			{
+				"name": "Contact",
+				"url": "/contact.html"
+			}
+		]
+	}
+}

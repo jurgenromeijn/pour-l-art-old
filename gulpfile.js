@@ -88,6 +88,9 @@ gulp.task('deploy-html', function() {
 	return gulp.src(path.src.templates_main)
 		.pipe(swig({
 			load_json: true,
+            defaults: {
+                cache: false
+            },
   			json_path: path.src.data,
 		}))
 		.pipe(gulp.dest(path.build.webroot));

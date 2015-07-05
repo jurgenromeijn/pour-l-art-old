@@ -2,6 +2,11 @@
 	padding: 10px 30px;
 	transition: color 0.25s, background 0.25s;
 	box-shadow: none !important;
+    
+    &.btn-default:hover {
+        background-color: $gray-lighter;
+        border-color: $brand-primary;
+    }
 
 	&.btn-lg {
         font-size: $font-size-large;
@@ -26,15 +31,31 @@
     
     &.btn-full-width {
         width: 100%;
-		padding: 15px 15px !important;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
     }
     
-    &.btn-cart {
-        .plus {
+    .btn_icon {
+        float: left;
+        &.btn_icon-plus
+        {
             font-size: 30px;
             font-weight: lighter;
             float: left;
             line-height: 23px;
+        }
+        
+        i {
+            font-size: $font-size-large;
+        }
+    }    
+}
+
+.card {
+    .btn.btn-default {
+        background-color: #fff;
+        &:hover {
+            background-color: #fff;
         }
     }
 }

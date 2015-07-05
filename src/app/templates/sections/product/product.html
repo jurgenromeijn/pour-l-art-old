@@ -10,10 +10,10 @@
 <section class="section section-product product">
 	<div class="container">
 		<div class="row">
-            <div class="col-sm-8 product_images">
+            <div class="col-sm-7 col-md-8 product_images">
                 <img src="images/collection/monet.jpg" alt="monet" class="img-responsive" />
             </div>
-            <aside class="col-sm-4 product_buy">
+            <aside class="col-sm-5 col-md-4 product_buy">
                 <div class="card">
                     <div class="card_details">
 			            <h1 class="card_product">{{ product.name }}</h1>
@@ -24,11 +24,28 @@
                         </ul>
                     </div>
                     <hr class="card_line" />
-                    <p class="card_price">&euro; {{ product.price }}</p>
-                    <a href="" class="btn btn-cart btn-primary btn-full-width btn-lg">
-                        <span class="plus">+</span> 
-                        In winkelwagen
-                    </a>
+                    <div class="card_buy">
+                        <p class="card_price">&euro; {{ product.price }}</p>
+                        <a href="" class="btn btn-cart btn-primary btn-full-width btn-lg">
+                            <span class="btn_icon btn_icon-plus">+</span> 
+                            In winkelwagen
+                        </a>
+                    </div>
+                    <hr class="card_line" />
+                    <div class="card_options">
+                        <p>
+                            <a href="" class="btn btn-cart btn-default btn-full-width">
+                                <span class="btn_icon"><i class="fa fa-heart"></i></span>
+                                Aan favorieten toevoegen
+                            </a>
+                        </p>
+                        <p>
+                            <a href="" class="btn btn-cart btn-default btn-full-width">
+                                <span class="btn_icon"><i class="fa fa-eye"></i></span> 
+                                Bekijk in woonkamer
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </aside>		    
 		</div>

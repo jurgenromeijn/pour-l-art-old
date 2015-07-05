@@ -2,7 +2,7 @@
     background: $gray-lighter;
     border-radius: 2px;
     overflow: hidden;
-    padding: 15px;
+    padding: 15px 15px 5px;
 }
 
 .card-responsive {
@@ -18,4 +18,8 @@ hr.card_line {
     border-top: 1px solid #fff;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+btn.btn-primary {
+    background-color: #fff;
 }

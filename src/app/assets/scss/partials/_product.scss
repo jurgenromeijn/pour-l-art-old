@@ -1,10 +1,29 @@
 .product {
-    .btn-cart {
-        .plus {
-            font-size: 30px;
-            font-weight: lighter;
-            float: left;
-            line-height: 23px;
-        }
+    .product_images {
+        margin-top: 30px;
+    }
+    
+    .product_buy {
+        margin-top: 30px;
+    }
+    
+    .card_product {
+        margin-bottom: 0;
+    }
+    
+    .card_specs {
+        font-weight: lighter;
+    }
+    
+    .card_artist {
+        color: $gray;
+        font-size: $font-size-large;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+    
+    .card_price {
+        font-size: $font-size-large;
+        font-weight: lighter;
     }
 }

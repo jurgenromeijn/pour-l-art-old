@@ -2,28 +2,35 @@
     <div class="container">
         <ol class="breadcrumb">
             <li><a href="">Kunstenaars</a></li>
-            <li><a href="">Monet</a></li>
+            <li><a href="">{{ product.artist_fullname }}</a></li>
             <li class="active">{{ product.name }}</li>
         </ol>
     </div>
 </section>
 <section class="section section-product product">
 	<div class="container">
-		<header class="section_header" id="collection">
-			<h2>{{ product.name }}</h2>
-		</header>
 		<div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-8 product_images">
                 <img src="images/collection/monet.jpg" alt="monet" class="img-responsive" />
             </div>
-            <div class="col-sm-4">
+            <aside class="col-sm-4 product_buy">
                 <div class="card">
+                    <div class="card_details">
+			            <h1 class="card_product">{{ product.name }}</h1>
+                        <ul class="list-unstyled card_specs">
+                            <li class="card_artist">{{ product.artist_fullname }}</li>
+                            <li>{{ product.type }}</li>
+                            <li>{{ product.specs.size }}</li>
+                        </ul>
+                    </div>
+                    <hr class="card_line" />
+                    <p class="card_price">&euro; {{ product.price }}</p>
                     <a href="" class="btn btn-cart btn-primary btn-full-width btn-lg">
                         <span class="plus">+</span> 
                         In winkelwagen
                     </a>
                 </div>
-            </div>		    
+            </aside>		    
 		</div>
 	</div>
 </section>

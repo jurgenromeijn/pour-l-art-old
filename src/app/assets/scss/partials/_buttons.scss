@@ -28,4 +28,13 @@
         width: 100%;
 		padding: 15px 15px !important;
     }
+    
+    &.btn-cart {
+        .plus {
+            font-size: 30px;
+            font-weight: lighter;
+            float: left;
+            line-height: 23px;
+        }
+    }
 }

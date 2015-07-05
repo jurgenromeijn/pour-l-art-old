@@ -32,11 +32,11 @@
     "product": {
         "name": "Waterlelies",
         "artist": "Monet",
-        "artust_fullname": "Claude Moet",
-        "price": 1000000.00,
+        "artist_fullname": "Claude Monet",
+        "price": "1.000.000,-",
+        "type": "Schilderij",
         "specs": {
-            "size": "",
-            "weight": ""
+            "size": "200 × 1276 cm "
         }
     }
 }

@@ -7,12 +7,14 @@ var gulp         = require('gulp'),
 	clean        = require('gulp-clean'),
 	imageop      = require('gulp-image-optimization'),
 	swig         = require('gulp-swig'),
-	data         = require('gulp-data');
+	data         = require('gulp-data'),
+    connect      = require('gulp-connect'); 
 
 var path = {
 	src : {
 		assets: 'src/app/assets/**',
 		data: 'src/app/data/',
+		data_files: 'src/app/data/**',
 		fonts: 'src/app/assets/fonts/**',
 		images: 'src/app/assets/images/**',
 		templates: 'src/app/templates/**',
@@ -45,17 +47,19 @@ var path = {
 		fonts: 'build/webroot/fonts',
 		images: 'build/webroot/images',
 		js: 'build/webroot/js',
-		webroot: 'build/webroot'
+		webroot: 'build/webroot',
+		webroot_files: 'build/webroot/**'
 	}
 };
 
-gulp.task('default', ['build-dev', 'watch']);
+gulp.task('default', ['build-dev', 'server-connect', 'watch']);
 
 gulp.task('watch', function() {
 	gulp.watch([path.src.assets, '!' + path.src.scss], ['deploy-assets']);
 	gulp.watch(path.src.scss, ['deploy-css-dev']);
-	gulp.watch(path.src.templates, ['deploy-html']);
+	gulp.watch([path.src.templates, path.src.data_files], ['deploy-html']);
 	gulp.watch(path.vendor.all, ['deploy-assets']);
+	gulp.watch(path.build.webroot_files, ['server-reload']);
 });
 
 gulp.task('build', ['deploy-vendor', 'deploy-css', 'deploy-html', 'deploy-assets'], function() {
@@ -146,4 +150,16 @@ gulp.task('deploy-vendor-fontawesome', function() {
 gulp.task('deploy-vendor-jquery', function() {
 	return gulp.src(path.vendor.jquery.js)
 		.pipe(gulp.dest(path.build.js));
+});
+
+gulp.task('server-connect', function() {
+    connect.server({
+        root: path.build.webroot,
+        livereload: true
+    });
+});
+
+gulp.task('server-reload', function(){
+    gulp.src(path.build.webroot_files)
+        .pipe(connect.reload());
 });

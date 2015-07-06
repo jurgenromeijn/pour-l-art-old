@@ -1,0 +1,12 @@
+.list-checks {
+	@extend .list-unstyled;
+    
+    li {
+        @extend .fa-check;
+        &::before {
+            color: $brand-primary;
+            font: normal normal normal 14px/1 FontAwesome; // shortening font declaration
+            margin-right: 5px;
+        }
+    }
+}

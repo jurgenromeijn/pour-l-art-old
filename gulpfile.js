@@ -20,26 +20,27 @@ var path = {
 		templates: 'src/app/templates/**',
 		templates_main: 'src/app/templates/*.html',
 		js: 'src/app/assets/js/**',
-		scss: 'src/app/assets/scss/**',
+		scss: 'src/app/assets/scss',
 		scss_main: 'src/app/assets/scss/styles.scss',
 		webroot: 'src/app/assets/webroot/**',
 	},
 	vendor : {
-		all: 'vendor/**',
+		all: 'bower_components/**',
 		bootstrap: {
-			fonts: 'vendor/bootstrap-sass-3.3.1/assets/fonts/**',
-			images: 'vendor/bootstrap-sass-3.3.1/assets/images/**',
-			js: 'vendor/bootstrap-sass-3.3.1/assets/javascripts/**',
-			scss: 'vendor/bootstrap-sass-3.3.1/assets/stylesheets/**',
-			root: 'vendor/bootstrap-sass-3.3.1'
+			fonts: 'bower_components/bootstrap-sass/assets/fonts/**',
+			images: 'bower_components/bootstrap-sass/assets/images/**',
+			js: 'bower_components/bootstrap-sass/assets/javascripts/**',
+			scss: 'bower_components/bootstrap-sass/assets/stylesheets',
+			root: 'bower_components/bootstrap-sass'
 		},
 		jquery: {
-			js: 'vendor/jquery-2.1.1/assets/js/**',
-			root: 'vendor/jquery-2.1.1'
+			js: 'bower_components/jquery/dist/jquery.min.js',
+			root: 'bower_components/jquery'
 		},
 		fontawesome: {
-			fonts: 'vendor/font-awesome-4.2.0/fonts/**',
-			root: 'vendor/font-awesome-4.2.0'
+			fonts: 'bower_components/components-font-awesome/fonts/**',
+			scss: 'bower_components/components-font-awesome/scss',
+			root: 'bower_components/components-font-awesome'
 		}
 	},
 	build: {
@@ -78,7 +79,13 @@ gulp.task('deploy-css', function() {
 
 gulp.task('deploy-css-dev', function() {
 	return gulp.src(path.src.scss_main)
-		.pipe(sass())
+		.pipe(sass({
+            loadPath: [
+                path.src.scss,
+                path.vendor.bootstrap.scss,
+                path.vendor.fontawesome.scss
+            ]
+        }))
 		.pipe(autoprefixer())
 		.pipe(gulp.dest(path.build.css));
 });

@@ -1,0 +1,27 @@
+{
+  "name": "Pour l'Art",
+  "version": "0.6.1",
+  "homepage": "https://github.com/jurgenromeijn/Pour-L-art",
+  "authors": [
+    "Jurgen Romein <jurgen.romeijn@gmail.com>"
+  ],
+  "description": "The front end template of Pour l'Art",
+  "keywords": [
+    "Art",
+    "Front-end",
+    "eCommerce"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "components-font-awesome": "~4.3.0"
+  }
+}

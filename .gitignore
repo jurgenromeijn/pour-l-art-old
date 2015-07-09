@@ -37,6 +37,10 @@ logs
 npm-debug.log
 node_modules/
 
+# Bower specific #
+#################
+bower_components/
+
 # Sublime specific #
 ####################
 sftp-config*

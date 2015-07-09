@@ -44,12 +44,12 @@ var path = {
 		}
 	},
 	build: {
-		css: 'build/webroot/css',
-		fonts: 'build/webroot/fonts',
-		images: 'build/webroot/images',
-		js: 'build/webroot/js',
-		webroot: 'build/webroot',
-		webroot_files: 'build/webroot/**'
+		css: 'dist/css',
+		fonts: 'dist/fonts',
+		images: 'dist/images',
+		js: 'dist/js',
+		webroot: 'dist',
+		webroot_files: 'dist/**'
 	}
 };
 

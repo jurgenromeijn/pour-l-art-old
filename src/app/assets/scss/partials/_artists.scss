@@ -12,16 +12,15 @@
 
 .artist_name {
     color: $gray;
-    text-align: left;
 }
 
 .artist_caption {
     margin-top: 30px;
+    text-align: left;
 }
 
 .artist_description {
     margin-bottom: 30px;
-    text-align: left;
 }
 
 @media (max-width: $grid-float-breakpoint-max) {
@@ -29,4 +28,9 @@
         border: 5px solid #fff;
         margin-top: 15px;
     }
+}
+
+.card .artist_image {
+    border: 5px solid #fff !important;
+    margin-top: 15px;
 }

@@ -8,7 +8,9 @@ var gulp         = require('gulp'),
 	imageop      = require('gulp-image-optimization'),
 	swig         = require('gulp-swig'),
 	data         = require('gulp-data'),
-    connect      = require('gulp-connect'); 
+    connect      = require('gulp-connect'),
+    gulpSequence = require('gulp-sequence'),
+    changed      = require('gulp-changed');
 
 var path = {
 	src : {
@@ -53,25 +55,39 @@ var path = {
 	}
 };
 
-gulp.task('default', ['build-dev', 'server-connect', 'watch']);
+gulp.task('default', gulpSequence('build-dev', 'watch', 'server-connect'));
 
 gulp.task('watch', function() {
-	gulp.watch([path.src.assets, '!' + path.src.scss], ['deploy-assets']);
-	gulp.watch(path.src.scss, ['deploy-css-dev']);
-	gulp.watch([path.src.templates, path.src.data_files], ['deploy-html']);
-	gulp.watch(path.vendor.all, ['deploy-assets']);
-	gulp.watch(path.build.webroot_files, ['server-reload']);
+	gulp.watch([path.src.assets, '!' + path.src.scss], ['watch-assets']);
+	gulp.watch(path.src.scss, ['watch-scss']);
+	gulp.watch([path.src.templates, path.src.data_files], ['watch-templates']);
+	gulp.watch(path.vendor.all, ['watch-assets']);
 });
 
-gulp.task('build', ['deploy-vendor', 'deploy-css', 'deploy-html', 'deploy-assets'], function() {
+// Proxy tasks to allow gulpSequence to work with filewatching
+gulp.task('watch-assets', function(callback) { 
+    gulpSequence('deploy-assets', 'server-reload')(callback);
+});
+gulp.task('watch-scss', function(callback) { 
+    gulpSequence('deploy-css-dev', 'server-reload')(callback);
+});
+gulp.task('watch-templates', function(callback) { 
+    gulpSequence('deploy-html', 'server-reload')(callback);
 });
 
-gulp.task('build-dev', ['deploy-vendor', 'deploy-css-dev', 'deploy-html', 'deploy-assets'], function() {
-});
+gulp.task('build', ['deploy-vendor', 'deploy-css', 'deploy-html', 'deploy-assets']);
+
+gulp.task('build-dev', ['deploy-vendor', 'deploy-css-dev', 'deploy-html', 'deploy-assets']);
 
 gulp.task('deploy-css', function() {
 	return gulp.src(path.src.scss_main)
-		.pipe(sass())
+		.pipe(sass({
+            loadPath: [
+                path.src.scss,
+                path.vendor.bootstrap.scss,
+                path.vendor.fontawesome.scss
+            ]
+        }))
 		.pipe(autoprefixer())
 		.pipe(minifyCss())
 		.pipe(gulp.dest(path.build.css));
@@ -110,6 +126,7 @@ gulp.task('deploy-html', function() {
 gulp.task('deploy-assets', function() {
 	return merge(
 		gulp.src(path.src.images)
+            .pipe(changed(path.build.images))
 			.pipe(imageop({
 				optimizationLevel: 3,
 				progressive: true,
@@ -118,12 +135,15 @@ gulp.task('deploy-assets', function() {
 			.pipe(gulp.dest(path.build.images)),
 
 		gulp.src(path.src.fonts)
+            .pipe(changed(path.build.fonts))
 			.pipe(gulp.dest(path.build.fonts)),
 
 		gulp.src(path.src.js)
+            .pipe(changed(path.build.js))
 			.pipe(gulp.dest(path.build.js)),
 
 		gulp.src(path.src.webroot)
+            .pipe(changed(path.build.webroot))
 			.pipe(gulp.dest(path.build.webroot))
 	);
 });
@@ -133,9 +153,11 @@ gulp.task('deploy-vendor', ['deploy-vendor-bootstrap', 'deploy-vendor-fontawesom
 gulp.task('deploy-vendor-bootstrap', function() {
 	return merge(
 		gulp.src(path.vendor.bootstrap.fonts)
+            .pipe(changed(path.build.fonts))
 			.pipe(gulp.dest(path.build.fonts)),
 
 		gulp.src(path.vendor.bootstrap.images)
+            .pipe(changed(path.build.images))
 			.pipe(imageop({
 				optimizationLevel: 3,
 				progressive: true,
@@ -144,18 +166,21 @@ gulp.task('deploy-vendor-bootstrap', function() {
 			.pipe(gulp.dest(path.build.images)),
 
 		gulp.src(path.vendor.bootstrap.js)
+            .pipe(changed(path.build.js))
 			.pipe(gulp.dest(path.build.js))
 	);
 });
 
 gulp.task('deploy-vendor-fontawesome', function() {
 	return gulp.src(path.vendor.fontawesome.fonts)
+        .pipe(changed(path.build.fonts))
 		.pipe(gulp.dest(path.build.fonts));
 });
 
 
 gulp.task('deploy-vendor-jquery', function() {
 	return gulp.src(path.vendor.jquery.js)
+        .pipe(changed(path.build.js))
 		.pipe(gulp.dest(path.build.js));
 });
 

@@ -47,6 +47,10 @@
     li {
         display: inline-block;
         width: 100px;
+        
+        &+li {
+            margin-left: 5px;
+        }
     }
     
     .thumbnail {

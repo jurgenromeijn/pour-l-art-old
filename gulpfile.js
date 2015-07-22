@@ -59,7 +59,7 @@ gulp.task('default', gulpSequence('build-dev', 'watch', 'server-connect'));
 
 gulp.task('watch', function() {
 	gulp.watch([path.src.assets, '!' + path.src.scss], ['watch-assets']);
-	gulp.watch(path.src.scss, ['watch-scss']);
+	gulp.watch(path.src.scss + '/**', ['watch-scss']);
 	gulp.watch([path.src.templates, path.src.data_files], ['watch-templates']);
 	gulp.watch(path.vendor.all, ['watch-assets']);
 });

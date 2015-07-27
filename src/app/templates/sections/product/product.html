@@ -101,11 +101,32 @@
                         <img src="images/winners/2.jpg" alt="Larry Parker" class="artist_image">
                         <figcaption class="artist_caption">
                             <h3 class="artist_name">Claude Monet</h3>
-                            <p class="artist_description">Monet verhuisde toen hij ongeveer vijf jaar oud was met zijn familie naar Le Havre. Hij zat in de jaren 1861-1862 in militaire dienst in Algerije, hetgeen zijn latere keus om vooral landschappen te schilderen beïnvloed kan hebben.</p>                     
+                            <p>Monet verhuisde toen hij ongeveer vijf jaar oud was met zijn familie naar Le Havre. Hij zat in de jaren 1861-1862 in militaire dienst in Algerije, hetgeen zijn latere keus om vooral landschappen te schilderen beïnvloed kan hebben.</p>
+                            <p><a href="artist.html">Meer van Claude Monet</a></p>     
                         </figcaption>
                     </figure>
                 </div>
             </aside>
+            <header class="col-xs-12">
+                <h2 class="product_other_header">Meer van Claude Monet</h2>
+            </header>
+            <div class=" collection">
+                {% for collectionItem in collectionArtist %}
+                    <div class="col-xs-12 col-md-4 col-sm-6">
+                        {% include "../../blocks/collection_item.html" collectionItem %}
+                    </div>
+                {% endfor %}
+            </div>
+            <header class="col-xs-12">
+                <h2 class="product_other_header">Bekijk ook eens</h2>
+            </header>
+            <div class="collection">
+                {% for collectionItem in collectionAlternative %}
+                    <div class="col-xs-12 col-md-4 col-sm-6">
+                        {% include "../../blocks/collection_item.html" collectionItem %}
+                    </div>
+                {% endfor %}
+            </div>
 		</div>
 	</div>
 </section>

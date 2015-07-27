@@ -38,5 +38,7 @@
         "specs": {
             "size": "200 × 1276 cm "
         }
-    }
+    },
+	"collectionArtist": [1, 2, 3],
+	"collectionAlternative": [1, 2, 3]
 }
